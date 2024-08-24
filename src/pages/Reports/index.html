@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./../../styles/global.css" />
+    <title>Relatórios</title>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span>Relatórios</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/homeIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/pedidos/index.html">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/mensagens/index.html">Mensagens</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/inboxIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Inbox</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Analytics</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Transações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Transações Solicitadas</a>
+              </li>
+              <li>
+                <a href="/#">Transações - Ver Todas</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/Reports/index.html">Relatórios</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/Reports/index.html">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/#">Relatório de Pedidos</a>
+              </li>
+              <li>
+                <a href="/#">Relatórios Transações</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/newsIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">News</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Configurações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Contas de Recebimento</a>
+              </li>
+              <li>
+                <a href="/#">Cadastro de Funcionário</a>
+              </li>
+              <li>
+                <a href="/#">Lista de Funcionário</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!--FIM SIDEBAR-->
+    <!--CONTENT INIT-->
+    <main>
+      <div class="content-report">
+        <img
+          src="/src/assets/svgs/reportsOrder.svg"
+          alt="Relatórios de pedidos"
+        />
+        <p>Relatórios de pedidos</p>
+      </div>
+      <div class="content-report">
+        <img
+          src="/src/assets/svgs/reportsProducts.svg"
+          alt="Relatórios de produtos"
+        />
+        <p>Relatórios de produtos</p>
+      </div>
+      <div class="content-report">
+        <img
+          src="/src/assets/svgs/reportsTransactions.svg"
+          alt="Relatórios de Transações"
+        />
+        <p>Relatórios de Transações</p>
+      </div>
+      <!--MODAL PEDIDOS-->
+      <div id="myModalOrders" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="title">Filtrar Pedidos por:</h2>
+          <form>
+            <div class="inputs-display">
+              <div class="container-input">
+                <label for="periodoDe"
+                  >Período de: <span style="color: red">*</span></label
+                >
+                <input
+                  type="date"
+                  id="periodoDe"
+                  placeholder="dd / mm / aaaa"
+                />
+              </div>
+
+              <div>
+                <label for="ate">Até: <span style="color: red">*</span></label>
+                <input type="date" id="ate" placeholder="dd / mm / aaaa" />
+              </div>
+            </div>
+            <label id="pedidosCancelados">
+              <input type="checkbox" id="pedidosCancelados" />
+              Pedidos cancelados também
+            </label>
+            <button type="button">Gerar</button>
+          </form>
+        </div>
+      </div>
+      <!--MODAL Produtos-->
+      <div id="myModalProducts" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="title">Filtrar Produtos por:</h2>
+          <form>
+            <div class="inputs-display">
+              <div class="container-input">
+                <label for="periodoDe"
+                  >Período de: <span style="color: red">*</span></label
+                >
+                <input
+                  type="date"
+                  id="periodoDe"
+                  placeholder="dd / mm / aaaa"
+                />
+              </div>
+
+              <div>
+                <label for="ate">Até: <span style="color: red">*</span></label>
+                <input type="date" id="ate" placeholder="dd / mm / aaaa" />
+              </div>
+            </div>
+            <div class="radios">
+              <label id="maisVendidos">
+                <input type="radio" name="maisVendidos" id="maisVendidos" />
+                Mais Vendidos
+              </label>
+              <label id="maisVendidos">
+                <input type="radio" name="maisVendidos" id="maisVendidos" />
+                Menos Vendidos
+              </label>
+            </div>
+            <button type="button">Gerar</button>
+          </form>
+        </div>
+      </div>
+      <!--MODAL Transações-->
+      <div id="myModalTransactions" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="title">Filtrar Transações por:</h2>
+          <form>
+            <div class="inputs-display">
+              <div class="container-input">
+                <label for="periodoDe"
+                  >Período de: <span style="color: red">*</span></label
+                >
+                <input
+                  type="date"
+                  id="periodoDe"
+                  placeholder="dd / mm / aaaa"
+                />
+              </div>
+
+              <div>
+                <label for="ate">Até: <span style="color: red">*</span></label>
+                <input type="date" id="ate" placeholder="dd / mm / aaaa" />
+              </div>
+            </div>
+            <div class="radios">
+              <label id="todosValores">
+                <input type="radio" name="todosValores" id="todosValores" />
+                Todos os Valores
+              </label>
+              <label id="todosValores">
+                <input type="radio" name="todosValores" id="todosValores" />
+                Valores Pendentes
+              </label>
+            </div>
+            <button type="button">Gerar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
