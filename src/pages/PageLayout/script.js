@@ -41,10 +41,3 @@ sidebar.addEventListener("mouseover", function () {
   logoIfood.style.height = "100px";
 });
 // FIM SCRIPTS PARA SIDEBAR
-
-//SCRIPT PARA ENCAMINHAR PARA DETALHES DE PEDIDO
-document.querySelectorAll("tr[data-href]").forEach((row) => {
-  row.addEventListener("click", () => {
-    window.location.href = row.getAttribute("data-href");
-  });
-});

@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./../../styles/global.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Detalhes de pedido</title>
+    <title>Pedidos</title>
   </head>
   <body>
-    <!--HEADER-->
     <header>
-      <p>Você está em: <span>Pedidos - Detalhes de pedido</span></p>
+      <p>Você está em: <span>Pagina de Layout</span></p>
       <div class="user-details">
         <img
           src="./../../assets/lightOrDark.svg"
@@ -56,7 +49,7 @@
             src="./../../assets//images/icons/pedidosIcon.svg"
             alt="home icon"
           />
-          <a href="/src/pages/pedidos/index.html">Pedidos</a>
+          <a href="/#">Pedidos</a>
         </li>
         <li>
           <img
@@ -88,6 +81,7 @@
           <img
             src="./../../assets//images/icons/arowRight.svg"
             alt="home icon"
+            class="arrow"
           />
           <div class="sub-nav">
             <ul>
@@ -181,38 +175,6 @@
         </li>
       </ul>
     </nav>
-    <!--CONTAINER CONTENT-->
-    <main>
-      <p>Dados do cliente:</p>
-      <div class="container-data">
-        <p>Nome:</p>
-        <p>CPF:</p>
-        <p>Endereço:</p>
-        <p>Complemento:</p>
-        <p>Bairro:</p>
-        <p>CEP:</p>
-      </div>
-
-      <p>Lista de produtos:</p>
-      <table>
-        <thead>
-          <tr>
-            <td>Nome do produto</td>
-            <td>Quantidade</td>
-            <td>Preço unitário</td>
-          </tr>
-        </thead>
-      </table>
-      <!-- Adicionado estilização inline para aumentar apenas a distancia da tabela de cima ficar visivelmente melhor-->
-      <p style="margin-top: 60px">Dados adicionais:</p>
-      <div class="container-data">
-        <p>Valor do Frete:</p>
-        <p>Cupom aplicado:</p>
-        <p>Descontos:</p>
-        <p>Valor total dos produtos:</p>
-        <p>Valor total da compra:</p>
-      </div>
-    </main>
   </body>
   <script src="./script.js"></script>
 </html>

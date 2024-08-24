@@ -14,11 +14,11 @@ h1 {
   font-size: 2rem;
 }
 
-#messages-list{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 60vw;
+#messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 60vw;
 }
 
 #options-filter {
@@ -34,10 +34,10 @@ h1 {
 }
 
 #options-filter a.active {
-    color: red;
-    font-weight: bold;
-    text-decoration: underline;
-  }
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 #container-messages {
   display: flex;
@@ -60,51 +60,50 @@ h1 {
   font-weight: bold;
 }
 
-#icon{
-    width: 2rem;
-    height: 2rem;
-    background-color: #707070;
-    border-radius: 4px;
+#icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #707070;
+  border-radius: 4px;
 }
 
-#message-card{ 
-    border-radius: 4px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    justify-content: space-between;
-    display: none;
-    
+#message-card {
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  justify-content: space-between;
+  display: none;
 }
 
-#message-card p { 
-    font-size: 1.8rem;
+#message-card p {
+  font-size: 1.8rem;
 }
 
-#ifood-img{
-    width: 60%;
-    margin: 0 auto;
+#ifood-img {
+  width: 60%;
+  margin: 0 auto;
 }
 
-@media(max-width: 900px){ 
-    html{
-        font-size: 57%;
-    }
-}
-@media(max-width: 740px){ 
-    html{
-        font-size: 50%;
-    }
-
-    #messages-list{
-      width: 50vw;
+@media (max-width: 900px) {
+  html {
+    font-size: 57%;
   }
-  #message-card{ 
+}
+@media (max-width: 740px) {
+  html {
+    font-size: 50%;
+  }
+
+  #messages-list {
+    width: 50vw;
+  }
+  #message-card {
     width: 40vw;
-}
-#options-filter {
-  font-size: 4.2rem;
-}
+  }
+  #options-filter {
+    font-size: 4.2rem;
+  }
 }
