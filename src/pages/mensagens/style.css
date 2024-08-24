@@ -1,0 +1,110 @@
+main {
+  background-color: var(--white);
+  width: 95vw;
+  height: 85vh;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 14px;
+  margin: 0 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#messages-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60vw;
+}
+
+#options-filter {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  font-size: 5rem;
+}
+
+#options-filter li a:hover {
+  color: var(--red-color);
+  transition: color 150ms ease-in;
+}
+
+#options-filter a.active {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+#container-messages {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.6rem;
+  gap: 1.5rem;
+}
+
+.message {
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+#title-message {
+  font-weight: bold;
+}
+
+#icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: #707070;
+    border-radius: 4px;
+}
+
+#message-card{ 
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    justify-content: space-between;
+    display: none;
+    
+}
+
+#message-card p { 
+    font-size: 1.8rem;
+}
+
+#ifood-img{
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media(max-width: 900px){ 
+    html{
+        font-size: 57%;
+    }
+}
+@media(max-width: 740px){ 
+    html{
+        font-size: 50%;
+    }
+
+    #messages-list{
+      width: 50vw;
+  }
+  #message-card{ 
+    width: 40vw;
+}
+#options-filter {
+  font-size: 4.2rem;
+}
+}
