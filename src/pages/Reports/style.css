@@ -1,0 +1,328 @@
+/* HEADER  */
+header {
+  width: 90vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+header > p {
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--white);
+  margin-left: 10px;
+}
+
+header > p > span {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  max-height: 60px;
+}
+
+.user-details > img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.user-details > p {
+  font-size: 16px;
+  text-align: center;
+  color: var(--white);
+  font-weight: 700;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.perfil-user {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.perfil-user > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+/* FIM HEADER */
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 88px;
+  padding: 10px 14px;
+  background-color: #212121;
+  border-radius: 8px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* SideBar Aberta */
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar:hover > ul > li {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar:hover > ul > li > a {
+  display: block;
+  margin-left: 20px;
+}
+
+.sidebar:hover > ul > li > img {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar:hover > ul > li > img:nth-of-type(2) {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+}
+
+.sidebar:hover > hr {
+  width: 200px;
+  margin-left: 10px;
+  transition: 0.8s ease;
+}
+
+/*  Fim Sidebar Aberta */
+
+.container-top-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+
+.container-top > img {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar > hr {
+  width: 60px;
+}
+
+.sidebar > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidebar > ul > li {
+  margin: 10px;
+  position: relative;
+  transition: 0.5s ease;
+  height: 40px;
+}
+
+.sidebar > ul > li > a {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.sidebar > ul > li > img {
+  width: 25px;
+  height: 25px;
+  transition: 0.5s ease;
+}
+
+.sidebar > ul > li > img:nth-of-type(2) {
+  display: none;
+}
+
+.sidebar ul > li > .sub-nav {
+  display: none;
+  padding: 10px;
+}
+
+.sidebar ul > li > .sub-nav > ul {
+  list-style: none;
+}
+
+.sidebar ul > li > .sub-nav > ul > li {
+  width: 200px;
+  height: 30px;
+}
+
+.sidebar ul > li > .sub-nav > ul > li > a {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.sidebar ul > li > .sub-nav.show {
+  display: block;
+  position: absolute;
+  left: 225px;
+  height: max-content;
+  background-color: #212121;
+  transition: 0.5s ease;
+}
+
+.arrow {
+  transition: 1s ease;
+}
+/* FIM SIDEBAR */
+
+main {
+  margin: 40px;
+  padding-left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+main > p {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.content-report {
+  max-width: 200px;
+  max-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.content-report > img {
+  max-width: 100px;
+  max-height: 100px;
+  cursor: pointer;
+}
+
+.content-report > p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Estilo do fundo da modal */
+.modal {
+  display: none; /* Esconde a modal inicialmente */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+/* Estilo do conteúdo da modal */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 500px;
+  height: 250px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+/* Estilo do botão de fechar */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}
+
+/* Estilo do formulário */
+.modal-content label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.modal-content input[type="date"] {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.modal-content button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.modal-content button:hover {
+  background-color: darkred;
+}
+
+.inputs-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radios > label {
+  margin-right: 10px;
+}
