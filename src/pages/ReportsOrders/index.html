@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./../../styles/global.css" />
-    <title>Relatórios</title>
+    <title>Relatórios - Relatórios de Pedidos</title>
   </head>
   <body>
     <header>
-      <p>Você está em: <span>Relatórios</span></p>
+      <p>Você está em: <span> Relatórios - Relatórios de Pedidos</span></p>
       <div class="user-details">
         <img
           src="./../../assets/lightOrDark.svg"
@@ -179,135 +179,23 @@
         </li>
       </ul>
     </nav>
-    <!--FIM SIDEBAR-->
-    <!--CONTENT INIT-->
     <main>
-      <div class="content-report">
-        <img
-          src="/src/assets/svgs/reportsOrder.svg"
-          alt="Relatórios de pedidos"
-        />
-        <p>Relatórios de pedidos</p>
-      </div>
-      <div class="content-report">
-        <img
-          src="/src/assets/svgs/reportsProducts.svg"
-          alt="Relatórios de produtos"
-        />
-        <p>Relatórios de produtos</p>
-      </div>
-      <div class="content-report">
-        <img
-          src="/src/assets/svgs/reportsTransactions.svg"
-          alt="Relatórios de Transações"
-        />
-        <p>Relatórios de Transações</p>
-      </div>
-      <!--MODAL PEDIDOS-->
-      <div id="myModalOrders" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2 id="title">Filtrar Pedidos por:</h2>
-          <form>
-            <div class="inputs-display">
-              <div class="container-input">
-                <label for="periodoDe"
-                  >Período de: <span style="color: red">*</span></label
-                >
-                <input
-                  type="date"
-                  id="periodoDe"
-                  placeholder="dd / mm / aaaa"
-                />
-              </div>
-
-              <div>
-                <label for="ate">Até: <span style="color: red">*</span></label>
-                <input type="date" id="ate" placeholder="dd / mm / aaaa" />
-              </div>
-            </div>
-            <label id="pedidosCancelados">
-              <input type="checkbox" id="pedidosCancelados" />
-              Pedidos cancelados também
-            </label>
-            <button type="button">Gerar</button>
-          </form>
-        </div>
-      </div>
-      <!--MODAL Produtos-->
-      <div id="myModalProducts" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2 id="title">Filtrar Produtos por:</h2>
-          <form>
-            <div class="inputs-display">
-              <div class="container-input">
-                <label for="periodoDe"
-                  >Período de: <span style="color: red">*</span></label
-                >
-                <input
-                  type="date"
-                  id="periodoDe"
-                  placeholder="dd / mm / aaaa"
-                />
-              </div>
-
-              <div>
-                <label for="ate">Até: <span style="color: red">*</span></label>
-                <input type="date" id="ate" placeholder="dd / mm / aaaa" />
-              </div>
-            </div>
-            <div class="radios">
-              <label id="maisVendidos">
-                <input type="radio" name="maisVendidos" id="maisVendidos" />
-                Mais Vendidos
-              </label>
-              <label id="maisVendidos">
-                <input type="radio" name="maisVendidos" id="maisVendidos" />
-                Menos Vendidos
-              </label>
-            </div>
-            <button type="button">Gerar</button>
-          </form>
-        </div>
-      </div>
-      <!--MODAL Transações-->
-      <div id="myModalTransactions" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2 id="title">Filtrar Transações por:</h2>
-          <form>
-            <div class="inputs-display">
-              <div class="container-input">
-                <label for="periodoDe"
-                  >Período de: <span style="color: red">*</span></label
-                >
-                <input
-                  type="date"
-                  id="periodoDe"
-                  placeholder="dd / mm / aaaa"
-                />
-              </div>
-
-              <div>
-                <label for="ate">Até: <span style="color: red">*</span></label>
-                <input type="date" id="ate" placeholder="dd / mm / aaaa" />
-              </div>
-            </div>
-            <div class="radios">
-              <label id="todosValores">
-                <input type="radio" name="todosValores" id="todosValores" />
-                Todos os Valores
-              </label>
-              <label id="todosValores">
-                <input type="radio" name="todosValores" id="todosValores" />
-                Valores Pendentes
-              </label>
-            </div>
-            <button type="button">Gerar</button>
-          </form>
-        </div>
-      </div>
+      <strong>0 pedidos encontrados</strong>
+      <table>
+        <thead>
+          <tr>
+            <th># Pedido</th>
+            <th>Nome Cliente</th>
+            <th>Total do Pedido</th>
+            <th>Status</th>
+            <th>Cupom</th>
+            <th>Desconto</th>
+            <th>Data do pedido</th>
+            <th>Ultima alteração</th>
+          </tr>
+        </thead>
+      </table>
+      <p>Não encontramos nenhum registro</p>
     </main>
   </body>
   <script src="./script.js"></script>
