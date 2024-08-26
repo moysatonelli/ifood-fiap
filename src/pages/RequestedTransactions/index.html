@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./../../styles/global.css" />
+    <title>Transações - Transações Solicitadas</title>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span>Transações - Transações Solicitadas</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/homeIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Mensagens</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/inboxIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Inbox</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Analytics</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Transações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/RequestedTransactions/index.html"
+                  >Transações Solicitadas</a
+                >
+              </li>
+              <li>
+                <a href="/#">Transações - Ver Todas</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Relatórios</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/#">Relatório de Pedidos</a>
+              </li>
+              <li>
+                <a href="/#">Relatórios Transações</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/newsIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">News</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Configurações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Contas de Recebimento</a>
+              </li>
+              <li>
+                <a href="/#">Cadastro de Funcionário</a>
+              </li>
+              <li>
+                <a href="/#">Lista de Funcionário</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="cards-information">
+        <div class="card">
+          <p>Valor Total Ganho</p>
+          <div class="container-values">
+            <img
+              src="/src/assets/images/icons/dolarIcon.svg"
+              alt="Cifrão Dolar"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <p>Valor Total Pendente</p>
+          <div class="container-values">
+            <img
+              src="/src/assets/images/icons/dolarIcon.svg"
+              alt="Cifrão Dolar"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <p>Valor Total Recebido</p>
+          <div class="container-values">
+            <img
+              src="/src/assets/images/icons/dolarIcon.svg"
+              alt="Cifrão Dolar"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <!--STYLE INLINE FOR LAST CARD-->
+          <p style="color: red">Valor Cancelado</p>
+          <div class="container-values">
+            <img
+              src="/src/assets/images/icons/dolarIcon.svg"
+              alt="Cifrão Dolar"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="transactions-list">
+        <div class="table-transactions">
+          <strong>0 Solicitações Encontradas</strong>
+          <table>
+            <thead>
+              <tr>
+                <th>Data do Pedido</th>
+                <th>ID do Pedido</th>
+                <th>Valor Pendente</th>
+                <th>Valor Cancelado</th>
+                <th>Liberação do Pagamento</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+          </table>
+          <p>Não encontramos nenhum registro</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
