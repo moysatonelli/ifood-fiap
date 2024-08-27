@@ -153,12 +153,15 @@ input[type="password"]::-ms-reveal {
 }
 
 .slide {
-  transition: 1s;
+  width: 50vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  transition: margin-left 1s;
 }
 
 #slides img {
-  width: 50vw;
-  height: 115vh;
+  display: none;
 }
 
 #slides {
@@ -189,10 +192,10 @@ input[type="password"]::-ms-reveal {
 .navigation-container {
   display: flex;
   gap: 2rem;
-  /* background-color: #ccc; */
+  background-color: #ccc;
   padding: 0.5rem 4rem;
   border-radius: 12px;
-  /* border: solid 2px rgb(117, 117, 117); */
+  border: solid 2px rgb(117, 117, 117);
 }
 
 #radio1:checked ~ .first {
@@ -206,7 +209,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .navigation-auto div {
-  border: 3px solid rgb(4, 0, 255);
+  border: 3px solid var(--red-color);
   padding: 5px;
   border-radius: 10px;
   border-radius: 10px;
@@ -224,10 +227,22 @@ input[type="password"]::-ms-reveal {
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
   background-color: var(--red-color);
+  position: relative;
+  z-index: 10;
 }
 #radio2:checked ~ .navigation-auto .auto-btn2 {
   background-color: var(--red-color);
+  position: relative;
+  z-index: 10;
 }
 #radio3:checked ~ .navigation-auto .auto-btn3 {
   background-color: var(--red-color);
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
 }
