@@ -1,0 +1,250 @@
+html {
+  font-size: 62.5%;
+}
+
+main {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+#welcome-text {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--red-color);
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  width: 85%;
+  padding-left: 6px;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+}
+
+.input-container {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-container div {
+  border: solid 1px black;
+  border-radius: 7px;
+  display: flex;
+}
+
+.icon {
+  padding: 6px;
+  border-right: 1px solid black;
+}
+
+#email-input,
+#password-input {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#enter-btn {
+  background-color: var(--red-color);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.8rem 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-section p {
+  font-size: 1.6rem;
+}
+
+.form-section span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-section span:hover {
+  text-decoration: underline;
+}
+
+.slide-section {
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--red-color);
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: 50vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  transition: margin-left 1s;
+}
+
+#slides img {
+  display: none;
+}
+
+#slides {
+  width: 150vw;
+  display: flex;
+}
+
+#slides input {
+  display: none;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 50vw;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.manual-btn {
+  border: 3px solid red;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navigation-container {
+  display: flex;
+  gap: 2rem;
+  background-color: #ccc;
+  padding: 0.5rem 4rem;
+  border-radius: 12px;
+  border: solid 2px rgb(255, 255, 255);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -50vw;
+}
+#radio3:checked ~ .first {
+  margin-left: -100vw;
+}
+
+.navigation-auto div {
+  border: 3px solid var(--red-color);
+  padding: 5px;
+  border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  bottom: 65px;
+  gap: 2rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: var(--red-color);
+  position: relative;
+  z-index: 10;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: var(--red-color);
+  position: relative;
+  z-index: 10;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: var(--red-color);
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
