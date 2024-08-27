@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <script
+      src="https://kit.fontawesome.com/0ec44f1edc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <section class="form-section">
+        <h2 id="welcome-text">Bem vindo</h2>
+        <h1 id="title">Parceiro</h1>
+
+        <form id="login">
+          <div class="input-container">
+            <label for="email">E-mail:</label>
+            <div id="email-input">
+              <i class="fa-regular fa-envelope icon"></i>
+              <input type="email" id="email" />
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="password">Senha:</label>
+            <div id="password-input">
+              <i class="fa-solid fa-lock icon"></i>
+              <input type="password" id="password" />
+              <i class="toggle-password fa-regular fa-eye-slash"></i>
+            </div>
+          </div>
+          <label class="custom-checkbox">
+            <input type="checkbox" id="checkbox" />
+            <span class="checkmark"></span>
+            Lembrar de mim
+          </label>
+
+          <button type="submit" id="enter-btn">entrar</button>
+
+          <p>Novo aqui? <span>Faça cadastro agora!</span></p>
+        </form>
+      </section>
+      <section class="slide-section">
+        <div id="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="./img/first-slide.png" alt="imagem">
+            </div>
+            <div class="slide">
+                <img src="./img/first-slide.png" alt="imagem">
+            </div>
+            <div class="slide">
+                <img src="./img/first-slide.png" alt="imagem">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+            <div class="navigation-container">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+
+      </section>
+      
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
