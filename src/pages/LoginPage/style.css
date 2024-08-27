@@ -19,11 +19,13 @@ main {
 }
 
 #welcome-text {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 #title {
-  font-size: 5.5rem;
+  font-size: 8rem;
+  font-weight: 700;
   color: var(--red-color);
 }
 
@@ -195,7 +197,7 @@ input[type="password"]::-ms-reveal {
   background-color: #ccc;
   padding: 0.5rem 4rem;
   border-radius: 12px;
-  border: solid 2px rgb(117, 117, 117);
+  border: solid 2px rgb(255, 255, 255);
 }
 
 #radio1:checked ~ .first {
