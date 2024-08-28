@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./../../styles/global.css" />
+    <title>Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span>Analytics</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/homeIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Mensagens</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/inboxIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Inbox</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/Analytics/index.html">Analytics</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/Analytics/index.html">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Transações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Transações Solicitadas</a>
+              </li>
+              <li>
+                <a href="/#">Transações - Ver Todas</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Relatórios</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/#">Relatório de Pedidos</a>
+              </li>
+              <li>
+                <a href="/#">Relatórios Transações</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/newsIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">News</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Configurações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Contas de Recebimento</a>
+              </li>
+              <li>
+                <a href="/#">Cadastro de Funcionário</a>
+              </li>
+              <li>
+                <a href="/#">Lista de Funcionário</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container-chart">
+        <p>Taxa de Conversão</p>
+        <p>Nesse ano</p>
+        <select name="year" id="yearSelect">
+          <option value="Esse ano">Esse ano</option>
+          <option value="Esse ano">2024</option>
+          <option value="Esse ano">2023</option>
+          <option value="Esse ano">2022</option>
+          <option value="Esse ano">2021</option>
+          <option value="Esse ano">2019</option>
+          <option value="Esse ano">2018</option>
+        </select>
+        <canvas id="meuGrafico"></canvas>
+      </div>
+      <div class="container-market">
+        <p>Market Share</p>
+        <p>Comparação da empresa no mercado</p>
+        <canvas id="marketShare"></canvas>
+        <div class="legenda">
+          <div><span class="vermelho"></span>Participação de mercado</div>
+          <div><span class="cinza"></span>Total</div>
+        </div>
+      </div>
+      <div class="container-roi">
+        <p>ROI</p>
+        <canvas id="barrasRoi"></canvas>
+      </div>
+      <div class="container-invoice">
+        <div class="display-data">
+          <div class="container-title">
+            <p>Faturamento</p>
+            <select name="year" class="yearSelect">
+              <option value="Esse ano">Ano</option>
+              <option value="Esse ano">2024</option>
+              <option value="Esse ano">2023</option>
+              <option value="Esse ano">2022</option>
+              <option value="Esse ano">2021</option>
+              <option value="Esse ano">2019</option>
+              <option value="Esse ano">2018</option>
+            </select>
+          </div>
+          <canvas id="invoice"></canvas>
+        </div>
+        <div class="display-infos">
+          <div class="meta">
+            <strong>Meta de faturamento: <span>4.000</span></strong>
+            <div class="progressBar">
+              <div class="progress"><strong>3.500</strong></div>
+            </div>
+            <div class="infos">
+              <strong>Informações Complementares</strong>
+              <div class="info-complementar">
+                <img src="/src/assets/svgs/crescimento.svg" alt="Crescimento" />
+                <span>+10%</span> em relação ao mês anterior
+              </div>
+              <div class="info-complementar">
+                <img
+                  src="/src/assets/svgs/quantityOrders.svg"
+                  alt="Quantidade Pedidos"
+                />
+                Total de pedidos <span>1.250</span>
+              </div>
+              <div class="info-complementar">
+                <img src="/src/assets/svgs/ticket.svg" alt="Ticket Médio" />
+                Ticket Médio <span>R$ 400,00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-turnover">
+        <div class="header-turnover">
+          <h1>Taxa de Turnover</h1>
+          <p>Rotatividade de Funcionários</p>
+        </div>
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-color" style="background-color: #ff0000"></span>
+            <div class="container-text">
+              <span
+                class="legend-text"
+                style="font-size: 26px; font-weight: bold"
+                >340</span
+              >
+              <span class="legend-text">Contratações</span>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color" style="background-color: #01f809"></span>
+            <div class="container-text">
+              <span
+                class="legend-text"
+                style="font-size: 26px; font-weight: bold"
+                >180</span
+              >
+              <span class="legend-text">Demissões</span>
+            </div>
+          </div>
+        </div>
+        <canvas id="turnoverChart"></canvas>
+      </div>
+      <div class="container-nps">
+        <p>Taxa de satisfação dos clientes NPS</p>
+        <canvas id="nps"></canvas>
+      </div>
+      <div class="container-claim">
+        <div class="container-title-claim">
+          <div>
+            <strong>Número de Reclamações</strong>
+            <p>Análise de Reclamações nessa Semana</p>
+          </div>
+          <div class="container-value">
+            <strong>-58</strong>
+            <div class="red-card"></div>
+          </div>
+        </div>
+        <canvas id="claim"></canvas>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
