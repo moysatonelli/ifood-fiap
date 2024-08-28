@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/layoutStyle.css" />
-    <link rel="stylesheet" href="./../../styles/global.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
     <title>Dashboard</title>
   </head>
   <body>
@@ -179,8 +180,233 @@
 
     <!-- Começo dashboard -->
     <main>
-        
+      <div class="top-card orders">
+        <p>Pedidos hoje</p>
+        <h2>450</h2>
+        <span>+ 18,75%</span>
+        <img src="./img/top-data/orders-icon.svg" alt="icone de pedidos hoje" />
+      </div>
+      <div class="top-card revenue">
+        <p>Receita diária</p>
+        <h2>R$ 999,99</h2>
+        <span>+ 18,75%</span>
+        <img
+          src="./img/top-data/revenue-icon.svg"
+          alt="icone de pedidos hoje"
+        />
+      </div>
+      <div class="top-card clients">
+        <p>Total clientes hoje</p>
+        <h2>250</h2>
+        <span>+ 18,75%</span>
+        <img
+          src="./img/top-data/clients-icon.svg"
+          alt="icone de pedidos hoje"
+        />
+      </div>
+      <div class="top-card expenses">
+        <p>Total de Despesas</p>
+        <h2>R$ 99,00</h2>
+        <img
+          src="./img/top-data/expenses-icon.svg"
+          alt="icone de pedidos hoje"
+        />
+      </div>
+
+      <div class="revenue-card">
+        <div class="change-view">
+          <button
+            onclick="updateChart('semanal')"
+            id="weekly-btn"
+            class="inactive selected"
+          >
+            Semanal
+          </button>
+          <button
+            onclick="updateChart('mensal')"
+            id="month-btn"
+            class="inactive"
+          >
+            Mensal
+          </button>
+          <button onclick="updateChart('anual')" id="year-btn" class="inactive">
+            Anual
+          </button>
+        </div>
+
+        <div class="top-data">
+          <p>receita</p>
+          <h1>5.987,34</h1>
+        </div>
+        <div class="line"></div>
+        <div class="chart">
+          <canvas id="chart" width="450px" height="250px"></canvas>
+        </div>
+      </div>
+
+      <div class="resume-orders">
+        <h1>resumo pedidos</h1>
+
+        <table>
+          <tr>
+            <th>ID Pedido</th>
+            <th>Data</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Status</th>
+            <th>Método de Pagamento</th>
+            <th>Categorias</th>
+        </tr>
+          <tr>
+            <td>#11111</td>
+            <td>05/2024</td>
+            <td>João</td>
+            <td>R$ 43,35</td>
+            <td class="completed">Concluído</td>
+            <td>Cartão</td>
+            <td>Categoria</td>
+          </tr>
+          <tr>
+            <td>#22222</td>
+            <td>05/2024</td>
+            <td>Julia</td>
+            <td>R$ 43,35</td>
+            <td class="completed">Concluído</td>
+            <td>Pix</td>
+            <td>Categoria</td>
+          </tr>
+          <tr>
+            <td>#33333</td>
+            <td>05/2024</td>
+            <td>Carlos</td>
+            <td>R$ 43,35</td>
+            <td class="pending">Pendente</td>
+            <td>Pix</td>
+            <td>Categoria</td>
+          </tr>
+          <tr>
+            <td>#44444</td>
+            <td>05/2024</td>
+            <td>Roberto</td>
+            <td>R$ 43,35</td>
+            <td class="canceled">Cancelado</td>
+            <td>Cartão</td>
+            <td>Categoria</td>
+          </tr>
+          <tr>
+            <td>#55555</td>
+            <td>05/2024</td>
+            <td>Maria</td>
+            <td>R$ 43,35</td>
+            <td class="pending">Pendente</td>
+            <td>Dinheiro</td>
+            <td>Categoria</td>
+          </tr>
+        </table>
+      </div>
+      <div class="popular-orders">
+        <h2>pedidos populares</h2>
+
+        <div class="order">
+            <div id="figure1"></div>
+            <div>
+                <p>Pizza de Atum</p>
+                <div class="bar-container">
+                    <div id="bar1"></div>
+                    <p>200</p>
+                </div>
+            </div>
+        </div>
+        <div class="order">
+            <div id="figure2"></div>
+            <div>
+                <p>Esfiha Fechada</p>
+                <div class="bar-container">
+                    <div id="bar2"></div>
+                    <p>185</p>
+                </div>
+            </div>
+        </div>
+        <div class="order">
+            <div id="figure3"></div>
+            <div>
+                <p>Coxinha de Frango</p>
+                <div class="bar-container">
+                    <div id="bar3"></div>
+                    <p>160</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <h2>Equipe</h2>
+
+        <div class="employee-container">
+            <div>
+                <img src="./img/team-section/chief-icon.svg" alt="">
+                <p>Chefe</p>
+            </div>
+            <p>2</p>
+        </div>
+        <div class="employee-container">
+            <div>
+                <img src="./img/team-section/waiter-icon.svg" alt="">
+                <p>Chefe</p>
+            </div>
+            <p>4</p>
+        </div>
+        <div class="employee-container">
+            <div>
+                <img src="./img/team-section/cashier-icon.svg" alt="">
+                <p>Chefe</p>
+            </div>
+            <p>2</p>
+        </div>
+        <div class="employee-container">
+            <div>
+                <img src="./img/team-section/chief-icon.svg" alt="">
+                <p>Outro</p>
+            </div>
+            <p>1</p>
+        </div>
+      </div>
+
+      <div class="expenses-card">
+        <div class="index">
+            <h2>Despesas Operacionais</h2>
+            <div class="list">
+                <span>01</span>
+                <p>Utilidades</p>
+            </div>
+            <div class="list">
+                <span>02</span>
+                <p>Salários e Benefícios</p>
+            </div>
+            <div class="list">
+                <span>03</span>
+                <p>Marketing</p>
+            </div>
+            <div class="list">
+                <span>04</span>
+                <p>Manutenção</p>
+            </div>
+            <div class="list">
+                <span>05</span>
+                <p>Suprimentos e Materiais</p>
+            </div>
+            <div class="list">
+                <span>06</span>
+                <p>Taxas</p>
+            </div>
+        </div>
+        <div class="chart-expense">
+                <canvas id="chart-expense" width="300px" height="250px"></canvas>
+        </div>
+      </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./scripts/chart.js"></script>
+    <script src="./scripts/layout.js"></script>
   </body>
-  <script src="./scripts/layout.js"></script>
 </html>
