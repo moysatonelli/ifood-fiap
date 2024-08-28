@@ -16,6 +16,8 @@ main {
   gap: 0.8rem;
 }
 
+/* Início dos 4 cards do topo */
+
 .top-card {
   background-color: #fff;
   display: flex;
@@ -25,6 +27,7 @@ main {
   gap: 4px;
   border-radius: 10px;
   justify-content: center;
+  min-width: 300px;
 }
 
 .top-card img {
@@ -46,6 +49,8 @@ main {
   font-weight: bold;
 }
 
+/* Início do Card de Receita com gráfico de linhas */
+
 .revenue-card {
   grid-column: span 2;
   background-color: #fff;
@@ -58,6 +63,8 @@ main {
   position: absolute;
   bottom: 1rem;
 }
+
+/* Início resumo de pedidos */
 
 .resume-orders {
   grid-column: span 2;
@@ -111,8 +118,6 @@ main {
   font-weight: bold;
 }
 
-/* Resumo Pedidos - style */
-
 .resume-orders h1 {
   text-transform: uppercase;
   font-weight: normal;
@@ -120,9 +125,11 @@ main {
   padding: 1rem;
 }
 
+/* Tabela do resumo de pedidos */
+
 .resume-orders table {
   margin: auto;
-  border-spacing: 5px 10px;
+  border-spacing: 10px 20px;
 }
 
 .resume-orders table th {
@@ -131,6 +138,7 @@ main {
 .resume-orders table td {
   text-align: center;
 }
+
 
 .completed {
   background-color: #3aba47;
@@ -146,16 +154,6 @@ main {
   background-color: #ff0000;
   color: #fff;
   border-radius: 4px;
-}
-
-@media (max-width: 1250px) {
-  .resume-orders {
-    font-size: 76%;
-    padding: 1rem;
-  }
-
- 
- 
 }
 
 /* Início card de pedidos populares */
@@ -256,6 +254,8 @@ main {
   font-weight: bold;
 }
 
+/* Início do card de despesas */
+
 .expenses-card {
   grid-column: span 2;
   background-color: #fff;
@@ -265,16 +265,6 @@ main {
   position: relative;
   justify-content: space-between;
 }
-
-
-/* @media (max-width: 1250px){
-
-    .expenses-card{
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem
-    }
-} */
 
 .index {
   display: flex;
@@ -306,4 +296,39 @@ main {
 
 .list p {
   font-weight: bold;
+}
+
+
+/* REGRAS DE RESPONSIVIDADE */
+
+
+@media (max-width: 1380px) {
+  .resume-orders {
+    font-size: 85%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 950px) {
+
+  /* AJUSTES RESPONSIVO DO CARD DE RECEITA */
+  .revenue-card {
+    grid-column: span 4;
+  }
+
+  .chart canvas {
+    width: 700px !important;
+    height: 250px !important;
+  }
+
+  /* AJUSTES RESPONSIVO DO CARD DE DESPESAS OPERACIONAIS */
+
+  .expenses-card {
+    grid-column: span 4;
+    
+  }
+
+  .chart-expense canvas{
+    width: 450px !important;
+    height: 350px !important;
+  }
 }
