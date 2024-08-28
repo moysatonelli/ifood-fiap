@@ -1,0 +1,334 @@
+html {
+  font-size: 62, 5%;
+}
+
+body{
+    margin-bottom: 12rem;
+}
+
+main {
+  width: 90vw;
+  height: 100vh;
+  margin: auto 6.6rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: 120px 380px;
+  gap: 0.8rem;
+}
+
+/* Início dos 4 cards do topo */
+
+.top-card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  gap: 4px;
+  border-radius: 10px;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.top-card img {
+  width: 40px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #d7d7d7;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.top-card h2 {
+  font-size: 1.5rem;
+}
+
+.top-card span {
+  color: #3aba47;
+  font-weight: bold;
+}
+
+/* Início do Card de Receita com gráfico de linhas */
+
+.revenue-card {
+  grid-column: span 2;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+}
+
+.chart {
+  position: absolute;
+  bottom: 1rem;
+}
+
+/* Início resumo de pedidos */
+
+.resume-orders {
+  grid-column: span 2;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.change-view {
+  position: absolute;
+  right: 1rem;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.inactive {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.top-data {
+  position: absolute;
+  top: 1rem;
+}
+
+.top-data p {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.line {
+  background-color: #d6d6d6;
+  width: 100%;
+  height: 1.5px;
+  position: absolute;
+  left: 0;
+  top: 6.5rem;
+}
+
+.selected {
+  background-color: black;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.resume-orders h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/* Tabela do resumo de pedidos */
+
+.resume-orders table {
+  margin: auto;
+  border-spacing: 10px 20px;
+}
+
+.resume-orders table th {
+  border-bottom: 2px solid black;
+}
+.resume-orders table td {
+  text-align: center;
+}
+
+
+.completed {
+  background-color: #3aba47;
+  color: #fff;
+  border-radius: 4px;
+}
+.pending {
+  background-color: #ffc452;
+  color: #fff;
+  border-radius: 4px;
+}
+.canceled {
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Início card de pedidos populares */
+
+.popular-orders {
+  grid-column: span 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.popular-orders h2 {
+  font-size: 1.2rem;
+}
+
+.order {
+  display: flex;
+  width: 100%;
+}
+
+#figure1 {
+  width: 60px;
+  background-image: url("../img/popular-orders/pizza.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#figure2 {
+  width: 60px;
+  background-image: url("../img/popular-orders/esfiha.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#figure3 {
+  width: 60px;
+  background-image: url("../img/popular-orders/coxinha.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bar-container {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+#bar1 {
+  width: 12rem;
+  height: 20px;
+  background-color: red;
+  border-radius: 5px;
+}
+#bar2 {
+  width: 10rem;
+  height: 20px;
+  background-color: red;
+  border-radius: 5px;
+}
+#bar3 {
+  width: 7rem;
+  height: 20px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+/* Início Team card */
+
+.team-card {
+  grid-column: span 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.team-card h2 {
+  font-size: 1.2rem;
+}
+
+.employee-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #ccc;
+}
+.employee-container div {
+  display: flex;
+  gap: 4px;
+}
+.employee-container > p {
+  color: red;
+  font-weight: bold;
+}
+
+/* Início do card de despesas */
+
+.expenses-card {
+  grid-column: span 2;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.index h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.list {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.list span {
+  background-color: red;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list p {
+  font-weight: bold;
+}
+
+
+/* REGRAS DE RESPONSIVIDADE */
+
+
+@media (max-width: 1380px) {
+  .resume-orders {
+    font-size: 85%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 950px) {
+
+  /* AJUSTES RESPONSIVO DO CARD DE RECEITA */
+  .revenue-card {
+    grid-column: span 4;
+  }
+
+  .chart canvas {
+    width: 700px !important;
+    height: 250px !important;
+  }
+
+  /* AJUSTES RESPONSIVO DO CARD DE DESPESAS OPERACIONAIS */
+
+  .expenses-card {
+    grid-column: span 4;
+    
+  }
+
+  .chart-expense canvas{
+    width: 450px !important;
+    height: 350px !important;
+  }
+}
