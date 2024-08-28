@@ -1,0 +1,106 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 4rem;
+}
+
+#calendar {
+  background-color: #fff;
+  width: 90vw;
+  margin: 0 6rem;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Estiliza o bloco onde está o nome do dia da semana */
+.fc-col-header-cell {
+  background-color: #d9d9d9; /* Define o fundo vermelho */
+  font-size: 2rem; /* Aumenta o tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  font-weight: bold;
+}
+
+.fc-day-today {
+  background-color: red;
+  color: #fff;
+}
+
+#calendar .fc-button {
+  background-color: red !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 15px !important;
+  font-size: 1.4rem !important;
+  margin: 2px;
+}
+
+#calendar .fc-button.fc-button-active {
+  background-color: #262626 !important;
+  color: #fff !important;
+}
+
+/* Estilos do Modal */
+
+#addEventModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.modal-content label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  text-align: left;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-buttons #cancelAddEvent {
+  background-color: #f44336;
+  color: #fff;
+}
+
+#submitForm {
+  background-color: red;
+  color: #fff;
+}
