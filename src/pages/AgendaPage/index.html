@@ -1,11 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/layoutStyle.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
     <title>Agenda</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span>Dashboard</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/homeIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Mensagens</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/inboxIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Inbox</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Analytics</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Transações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Transações Solicitadas</a>
+              </li>
+              <li>
+                <a href="/#">Transações - Ver Todas</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Relatórios</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/#">Relatório de Pedidos</a>
+              </li>
+              <li>
+                <a href="/#">Relatórios Transações</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/newsIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">News</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Configurações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Contas de Recebimento</a>
+              </li>
+              <li>
+                <a href="/#">Cadastro de Funcionário</a>
+              </li>
+              <li>
+                <a href="/#">Lista de Funcionário</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Início AGENDA -->
+    <main>
+      <div id="calendar"></div>
+    </main>
+
+    <div id="addEventModal" style="display: none;">
+        <div class="modal-content">
+          <h2>Criar Novo Evento</h2>
+          <form id="addEventForm">
+            <label for="eventTitle">Título:</label>
+            <input type="text" id="eventTitle" name="eventTitle" required />
+            
+            <label for="eventStart">Data de Início:</label>
+            <input type="datetime-local" id="eventStart" name="eventStart" required />
+            
+            <label for="eventEnd">Data de Término:</label>
+            <input type="datetime-local" id="eventEnd" name="eventEnd" required />
+      
+            <div class="modal-buttons">
+              <button type="button" id="cancelAddEvent">Cancelar</button>
+              <button type="submit" id="submitForm">Adicionar Evento</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+    <script src="./script.js"></script>
+  </body>
 </html>
