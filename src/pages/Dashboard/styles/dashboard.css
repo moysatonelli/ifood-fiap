@@ -1,5 +1,5 @@
 html {
-  font-size: 62, 5%;
+  font-size: 62,5%;
 }
 
 body{
@@ -300,8 +300,37 @@ main {
 
 
 /* REGRAS DE RESPONSIVIDADE */
+@media (max-width: 1920px) {
+  .list {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1368px) {
 
+  main {
+    width: 90vw;
+    height: 100vh;
+    margin: auto 6.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: 120px 380px;
+    gap: 0.8rem;
+  }
 
+  .chart canvas {
+    width: 550px !important;
+    height: 250px !important;
+  }
+
+  .chart-expense canvas{
+    width: 350px !important;
+    height: 250px !important;
+  }
+  .list {
+    font-size: 1rem;
+  }
+
+}
 @media (max-width: 1380px) {
   .resume-orders {
     font-size: 85%;
@@ -332,3 +361,5 @@ main {
     height: 350px !important;
   }
 }
+
+
