@@ -10,12 +10,15 @@ body {
 }
 
 header {
-  width: 90vw;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1024px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+  flex-wrap: nowrap;
+  padding-left: 90px;
 }
 
 header > p {
