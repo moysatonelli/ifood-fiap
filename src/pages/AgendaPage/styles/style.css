@@ -8,10 +8,8 @@ body {
 
 #calendar {
   background-color: #fff;
-  width: 90vw;
-  margin: 0 6rem;
-  padding: 2rem;
   border-radius: 8px;
+  width: 100%;
 }
 
 /* Estiliza o bloco onde está o nome do dia da semana */
@@ -103,4 +101,9 @@ body {
 #submitForm {
   background-color: red;
   color: #fff;
+}
+
+main {
+  width: 100%;
+  padding-left: 60px;
 }
