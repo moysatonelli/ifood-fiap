@@ -1,16 +1,18 @@
-*{
+* {
   font-size: 62.5%;
 }
 
 /* HEADER  */
 header {
-  width: 90vw;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1024px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0 2.5rem;
+  flex-wrap: nowrap;
+  padding-left: 90px;
 }
 
 header > p {
@@ -222,7 +224,6 @@ h1 {
 }
 
 #messages-list {
-
   display: flex;
   flex-direction: column;
   gap: 2rem;

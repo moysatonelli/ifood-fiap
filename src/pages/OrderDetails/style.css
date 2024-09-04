@@ -10,12 +10,15 @@ body {
 }
 
 header {
-  width: 90vw;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1024px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+  flex-wrap: nowrap;
+  padding-left: 90px;
 }
 
 header > p {
@@ -36,7 +39,6 @@ header > p > span {
   align-items: center;
   justify-content: flex-end;
   padding: 20px;
-  margin: 10px;
   max-height: 60px;
 }
 
@@ -71,8 +73,7 @@ header > p > span {
 /* COMEÇO DA ESTILIZAÇÃO DE DETALHES DE PEDIDO */
 
 main {
-  width: 1000px;
-  height: 100%;
+  max-width: 1000px;
   margin: 40px;
   padding-left: 60px;
 }
@@ -85,7 +86,7 @@ main > p {
 }
 
 .container-data {
-  width: 1000px;
+  width: 100%;
   background-color: none;
   border: 1px solid #fff;
 }
@@ -96,7 +97,7 @@ main > p {
 }
 
 table {
-  width: 1000px;
+  width: 100%;
   border-collapse: collapse;
   color: #fff; /* Cor do texto */
 }
