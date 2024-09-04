@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <title>Contas Recebimento</title>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span>Configurações - Contas de recebimento</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/homeIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Mensagens</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/inboxIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Inbox</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Analytics</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Transações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Transações Solicitadas</a>
+              </li>
+              <li>
+                <a href="/#">Transações - Ver Todas</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Relatórios</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/#">Relatório de Pedidos</a>
+              </li>
+              <li>
+                <a href="/#">Relatórios Transações</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets//images/icons/newsIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">News</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets//images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/#">Configurações</a>
+          <img
+            src="./../../assets//images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/#">Contas de Recebimento</a>
+              </li>
+              <li>
+                <a href="/#">Cadastro de Funcionário</a>
+              </li>
+              <li>
+                <a href="/#">Lista de Funcionário</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <form>
+        <button type="submit">salvar</button>
+        <div class="container-form">
+          <div class="transferContainer">
+          <!-- Card transferência Bancária -->
+            <h2>Transferência Bancária</h2>
+            <div class="field-container">
+              <label for="active">Ativo</label>
+              <select name="ativo" id="ativo">
+                <option value="ativo">ativo</option>
+                <option value="inativo">inativo</option>
+                <label for="banco">Escolha um banco:</label>
+              </select>
+            </div>
+            <div class="field-container">
+              <label for="banco">Banco</label>
+              <select id="banco" name="banco">
+                <option value="itau">Itaú</option>
+                <option value="bradesco">Bradesco</option>
+                <option value="santander">Santander</option>
+                <option value="caixa">Caixa Econômica Federal</option>
+                <option value="bb">Banco do Brasil</option>
+                <option value="nubank">Nubank</option>
+                <option value="banco-inter">Banco Inter</option>
+                <option value="banco-original">Banco Original</option>
+                <option value="banco-pan">Banco PAN</option>
+                <option value="sicredi">Sicredi</option>
+              </select>
+            </div>
+            <div class="container-duplo">
+              <div class="field-container">
+                <label for="account-type">Tipo de Conta</label>
+                <select id="account" name="account">
+                  <option value="corrente">Corrente</option>
+                  <option value="poupanca">Poupança</option>
+                </select>
+              </div>
+              <div class="field-container">
+                <label for="account-number">Número da conta</label>
+                <input type="text" id="account-number" />
+              </div>
+            </div>
+            <div class="container-duplo">
+              <div class="field-container">
+                <label for="bank-branch">Agência Bancária</label>
+                <input type="text" id="bank-branch"/>
+              </div>
+              <div class="field-container">
+                <label id="cvv" for="cvv">CVV <span class="tooltip">&#8505</span></label>
+                <input type="text" id="cvv"/>
+            </div>
+          </div>
+            <div class="field-container">
+              <label for="name-account">Nome da conta do banco</label>
+              <input type="text" id="name-account"/>
+            </div>
+          </div>
+          <div class="transferContainer">
+            <!-- Card pix -->
+            <h2>Pix</h2>
+            <div class="field-container">
+              <label for="active">Ativo</label>
+              <select name="ativo" id="ativo">
+                <option value="ativo">ativo</option>
+                <option value="inativo">inativo</option>
+                <label for="banco">Escolha um banco:</label>
+              </select>
+            </div>
+            <div class="field-container">
+              <label for="name-account">Nome da conta do banco</label>
+              <input type="text" id="name-account"/>
+            </div>
+            <div class="field-container">
+              <label for="banco">Tipo de Chave</label>
+              <select id="banco" name="banco">
+                <option value=""></option>
+                <option value="random">aleatória</option>
+                <option value="cnpg-cpf">cnpj/cpf</option>
+                <option value="tel-number">numero de telefone</option>
+              </select>
+            </div>
+            <div class="field-container">
+              <label for="name-account">Código do pix</label>
+              <input type="text" id="name-account"/>
+            </div>
+          </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
