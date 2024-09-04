@@ -2,8 +2,8 @@ html {
   font-size: 62, 5%;
 }
 
-body{
-    margin-bottom: 12rem;
+body {
+  margin-bottom: 12rem;
 }
 
 main {
@@ -138,7 +138,6 @@ main {
 .resume-orders table td {
   text-align: center;
 }
-
 
 .completed {
   background-color: #3aba47;
@@ -298,25 +297,69 @@ main {
   font-weight: bold;
 }
 
-
 /* REGRAS DE RESPONSIVIDADE */
-
-
-@media (max-width: 1380px) {
-  .resume-orders {
-    font-size: 85%;
-    padding: 1rem;
+@media (max-width: 1920px) {
+  .list {
+    font-size: 1.5rem;
   }
 }
-@media (max-width: 950px) {
-
-  /* AJUSTES RESPONSIVO DO CARD DE RECEITA */
-  .revenue-card {
-    grid-column: span 4;
+@media (max-width: 1368px) {
+  main {
+    width: 90vw;
+    height: 100vh;
+    margin: auto 6.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: auto;
+    gap: 0.8rem;
   }
 
   .chart canvas {
-    width: 700px !important;
+    width: 550px !important;
+    height: 250px !important;
+  }
+
+  .chart-expense canvas {
+    width: 350px !important;
+    height: 250px !important;
+  }
+  .list {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1380px) {
+}
+@media (max-width: 1200px) {
+  .orders {
+    grid-column: span 2;
+  }
+  .revenue {
+    grid-column: span 2;
+  }
+  .clients {
+    grid-column: span 2;
+  }
+  .expenses {
+    grid-column: span 2;
+  }
+  .revenue-card {
+    grid-column: span 4;
+    height: 400px;
+  }
+  .resume-orders {
+    grid-column: span 4;
+  }
+  .popular-orders {
+    grid-column: span 2;
+  }
+  .team-card {
+    grid-column: span 2;
+  }
+
+  /* AJUSTES RESPONSIVO DO CARD DE RECEITA */
+
+  .chart canvas {
+    width: 500px !important;
     height: 250px !important;
   }
 
@@ -324,11 +367,38 @@ main {
 
   .expenses-card {
     grid-column: span 4;
-    
   }
 
-  .chart-expense canvas{
+  .chart-expense canvas {
     width: 450px !important;
     height: 350px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .orders {
+    grid-column: span 4;
+  }
+  .revenue {
+    grid-column: span 4;
+  }
+  .clients {
+    grid-column: span 4;
+  }
+  .expenses {
+    grid-column: span 4;
+  }
+  .revenue-card {
+    grid-column: span 4;
+    height: 400px;
+  }
+  .resume-orders {
+    grid-column: span 4;
+  }
+  .popular-orders {
+    grid-column: span 4;
+  }
+  .team-card {
+    grid-column: span 4;
   }
 }
