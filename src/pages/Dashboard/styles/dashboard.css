@@ -303,13 +303,11 @@ main {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 1368px) {
+@media (max-width: 1440px) {
   main {
-    width: 90vw;
     height: 100vh;
-    margin: auto 6.6rem;
     display: grid;
-    grid-template-columns: repeat(4, 300px);
+    grid-template-columns: repeat(4, auto);
     grid-template-rows: auto;
     gap: 0.8rem;
   }
@@ -327,9 +325,14 @@ main {
     font-size: 1rem;
   }
 }
-@media (max-width: 1380px) {
-}
+
 @media (max-width: 1200px) {
+
+  .resume-orders table {
+    margin: 0 1rem;
+    width: 90%;
+  }
+
   .orders {
     grid-column: span 2;
   }
