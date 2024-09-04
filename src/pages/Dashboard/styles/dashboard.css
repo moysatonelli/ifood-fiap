@@ -310,7 +310,7 @@ main {
     margin: auto 6.6rem;
     display: grid;
     grid-template-columns: repeat(4, 300px);
-    grid-template-rows: 120px 380px;
+    grid-template-rows: auto;
     gap: 0.8rem;
   }
 
@@ -328,19 +328,38 @@ main {
   }
 }
 @media (max-width: 1380px) {
-  .resume-orders {
-    font-size: 85%;
-    padding: 1rem;
-  }
 }
 @media (max-width: 1200px) {
-  /* AJUSTES RESPONSIVO DO CARD DE RECEITA */
+  .orders {
+    grid-column: span 2;
+  }
+  .revenue {
+    grid-column: span 2;
+  }
+  .clients {
+    grid-column: span 2;
+  }
+  .expenses {
+    grid-column: span 2;
+  }
   .revenue-card {
     grid-column: span 4;
+    height: 400px;
+  }
+  .resume-orders {
+    grid-column: span 4;
+  }
+  .popular-orders {
+    grid-column: span 2;
+  }
+  .team-card {
+    grid-column: span 2;
   }
 
+  /* AJUSTES RESPONSIVO DO CARD DE RECEITA */
+
   .chart canvas {
-    width: 700px !important;
+    width: 500px !important;
     height: 250px !important;
   }
 
@@ -353,5 +372,33 @@ main {
   .chart-expense canvas {
     width: 450px !important;
     height: 350px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .orders {
+    grid-column: span 4;
+  }
+  .revenue {
+    grid-column: span 4;
+  }
+  .clients {
+    grid-column: span 4;
+  }
+  .expenses {
+    grid-column: span 4;
+  }
+  .revenue-card {
+    grid-column: span 4;
+    height: 400px;
+  }
+  .resume-orders {
+    grid-column: span 4;
+  }
+  .popular-orders {
+    grid-column: span 4;
+  }
+  .team-card {
+    grid-column: span 4;
   }
 }
