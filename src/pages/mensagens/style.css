@@ -6,7 +6,7 @@
 header {
   width: 100%;
   max-width: 1920px;
-  min-width: 1024px;
+  /* min-width: 1024px; */
   height: 60px;
   display: flex;
   align-items: center;
@@ -341,7 +341,12 @@ h1 {
 
 @media(max-width: 900px){
   main{
-    width: auto;
+    margin-top: 1rem;
     margin-left: 10rem;
+  }
+}
+@media(max-width: 625px){
+  main{
+    margin-top: 4rem;
   }
 }
