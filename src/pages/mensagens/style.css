@@ -208,6 +208,8 @@ header > p > span {
 }
 /* FIM SIDEBAR */
 
+/* INÍCIO MENSAGENS */
+
 main {
   background-color: var(--white);
   height: 85vh;
@@ -283,7 +285,8 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 30vw;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 4rem;
   display: none;
 }
 
@@ -292,27 +295,53 @@ h1 {
 }
 
 #ifood-img {
-  width: 60%;
+  width: auto;
   margin: 0 auto;
 }
 
-@media (max-width: 900px) {
-  html {
-    font-size: 57%;
-  }
-}
-@media (max-width: 740px) {
-  html {
-    font-size: 50%;
+@media(max-width: 1220px){
+  main{
+    flex-direction: column;
+    margin-left: auto;
+    width: 80vw;
+    height: auto;
   }
 
-  #messages-list {
-    width: 50vw;
+  #message-card{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
-  #message-card {
-    width: 40vw;
+
+  #messages-list{
+    width: 100%;
   }
-  #options-filter {
-    font-size: 4.2rem;
+
+  .message-content{
+    order: 2;
+  }
+
+  #ifood-img{
+    order: 3;
+
+  }
+
+  #message-card h1{
+    font-size: 1.8rem;
+  }
+  #message-card p{ 
+    font-size: 1.6rem;
+  }
+  #ifood-img {
+    width: 150px;
+  }
+}
+
+@media(max-width: 900px){
+  main{
+    width: auto;
+    margin-left: 10rem;
   }
 }
