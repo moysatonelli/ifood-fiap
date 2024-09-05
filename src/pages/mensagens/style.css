@@ -344,8 +344,9 @@ h1 {
     margin-left: 10rem;
   }
 }
-@media(max-width: 625px){
-  main{
-    margin-top: 4rem;
+
+@media(max-width: 660px){
+  .top-title{
+    font-size: 2rem;
   }
 }
