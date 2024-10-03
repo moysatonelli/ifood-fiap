@@ -92,8 +92,14 @@ main > p {
 }
 
 .container-data > p {
-  color: #fff;
+  color: #dbdbdb;
   padding: 5px;
+}
+
+.container-data > p > span {
+  color: #dbdbdb;
+  padding: 5px;
+  font-weight: 700;
 }
 
 table {
