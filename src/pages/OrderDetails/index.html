@@ -19,10 +19,6 @@
       <p>Você está em: <span>Pedidos - Detalhes de pedido</span></p>
       <div class="user-details">
         <img
-          src="./../../assets/lightOrDark.svg"
-          alt="Alterar modo claro ou escuro"
-        />
-        <img
           src="./../../assets/notificationIcon.svg"
           alt="Aviso de notificação"
         />
@@ -160,7 +156,9 @@
           <div class="sub-nav">
             <ul>
               <li>
-                <a href="../ContasRecebimento/index.html">Contas de Recebimento</a>
+                <a href="../ContasRecebimento/index.html"
+                  >Contas de Recebimento</a
+                >
               </li>
               <li>
                 <a href="/src/pages/CadastroFuncionario/index.html"
@@ -181,12 +179,12 @@
     <main>
       <p>Dados do cliente:</p>
       <div class="container-data">
-        <p>Nome:</p>
-        <p>CPF:</p>
-        <p>Endereço:</p>
-        <p>Complemento:</p>
-        <p>Bairro:</p>
-        <p>CEP:</p>
+        <p>Nome: <span>Thiago Lopes</span></p>
+        <p>CPF: <span>123.456.789-10</span></p>
+        <p>Endereço: <span>Rua Rubens Ferraz Santos, 725</span></p>
+        <p>Complemento: <span>Casa</span></p>
+        <p>Bairro: <span>Residencial Dr. Pedro Paschoal</span></p>
+        <p>CEP: <span>14709-208</span></p>
       </div>
 
       <p>Lista de produtos:</p>
@@ -198,15 +196,37 @@
             <td>Preço unitário</td>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td style="border: none">Lasanha 4 queijos 1KG</td>
+            <td style="border: none">1</td>
+            <td style="border: none">R$ 50,00</td>
+          </tr>
+          <tr>
+            <td style="border: none">Lasanha Com Carne moida 1KG</td>
+            <td style="border: none">1</td>
+            <td style="border: none">R$ 50,00</td>
+          </tr>
+          <tr>
+            <td style="border: none">Lasanha ao Molho Branco 1KG</td>
+            <td style="border: none">1</td>
+            <td style="border: none">R$ 50,00</td>
+          </tr>
+          <tr>
+            <td style="border: none">Conchiglione Recheado com Camarão</td>
+            <td style="border: none">1</td>
+            <td style="border: none">R$ 100,00</td>
+          </tr>
+        </tbody>
       </table>
       <!-- Adicionado estilização inline para aumentar apenas a distancia da tabela de cima ficar visivelmente melhor-->
       <p style="margin-top: 60px">Dados adicionais:</p>
       <div class="container-data">
-        <p>Valor do Frete:</p>
-        <p>Cupom aplicado:</p>
-        <p>Descontos:</p>
-        <p>Valor total dos produtos:</p>
-        <p>Valor total da compra:</p>
+        <p>Valor do Frete: <span>R$ 14,90</span></p>
+        <p>Cupom aplicado: <span>Nenhum</span></p>
+        <p>Descontos: <span>R$ 0,00</span></p>
+        <p>Valor total dos produtos: <span>R$ 250,00</span></p>
+        <p>Valor total da compra: <span>R$ 264,90</span></p>
       </div>
     </main>
   </body>

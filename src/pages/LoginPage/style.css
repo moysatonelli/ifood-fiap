@@ -30,9 +30,7 @@ main {
 }
 
 .input-container input {
-  border: none;
-  outline: none;
-  width: 85%;
+  width: 100%;
   padding-left: 6px;
   padding: 1rem;
   font-size: 1.6rem;
@@ -56,12 +54,6 @@ input[type="password"]::-ms-reveal {
   gap: 0.4rem;
 }
 
-.input-container div {
-  border: solid 1px black;
-  border-radius: 7px;
-  display: flex;
-}
-
 .icon {
   padding: 6px;
   border-right: 1px solid black;
@@ -71,6 +63,13 @@ input[type="password"]::-ms-reveal {
 #password-input {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+#password-input > i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 
 .custom-checkbox {
@@ -243,8 +242,14 @@ input[type="password"]::-ms-reveal {
   z-index: 10;
 }
 
-@media (max-width: 900px) {
-  html {
-    font-size: 50%;
+@media only screen and (max-width: 1280px) {
+  .slide-section {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
