@@ -252,8 +252,32 @@ td:last-child {
   padding-right: 0; /* Remover padding à direita para o último item */
 }
 
-.status {
+.status-completed {
   background-color: #3aba47;
+  height: 20px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.status-pending {
+  background-color: #ffbb00;
+  height: 20px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.status-canceled {
+  background-color: #ff0000;
+  height: 20px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.status-processing {
+  background-color: #f38911;
   height: 20px;
   text-align: center;
   font-weight: 600;
