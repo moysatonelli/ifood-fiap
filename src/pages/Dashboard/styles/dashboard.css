@@ -2,10 +2,6 @@ html {
   font-size: 62, 5%;
 }
 
-body {
-  margin-bottom: 12rem;
-}
-
 main {
   width: 90%;
   margin: auto 6.6rem;
@@ -47,13 +43,12 @@ main {
   font-weight: bold;
 }
 
-.expenses{
+.expenses {
   padding: 1rem;
   padding-top: -1rem;
-
 }
 
-.expenses-span{
+.expenses-span {
   color: red !important;
 }
 
@@ -139,7 +134,7 @@ main {
   padding: 20px;
   height: 400px;
 }
-table { 
+table {
   border-collapse: collapse;
   width: 100%;
   height: 80%;
@@ -152,7 +147,7 @@ td {
   text-align: center;
 }
 
-.status{
+.status {
   margin-left: 1rem;
 }
 
@@ -165,7 +160,6 @@ td {
   background-color: #ffc452;
   color: #fff;
   border-radius: 4px;
-
 }
 .canceled {
   background-color: #ff0000;
@@ -346,7 +340,6 @@ td {
 }
 
 @media (max-width: 1200px) {
-
   .resume-orders table {
     margin: 0 1rem;
     width: 90%;
@@ -409,8 +402,6 @@ td {
   }
   .expenses {
     grid-column: span 4;
-
-  
   }
   .revenue-card {
     grid-column: span 4;
