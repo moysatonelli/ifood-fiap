@@ -83,13 +83,15 @@ body {
   overflow: hidden;
 }
 
-.modal-confirm{
-  background-color: rgba(0, 0, 0, .2);
-  position: absolute;
+/* Estilos do modal de exclusão de evento */
+
+.modal-confirm {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed; 
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1000;
   display: flex;
 }
@@ -137,7 +139,6 @@ body {
 
 .buttons > button {
   border: none;
-  /* background: none; */
   font-size: 16px;
   padding: 2px;
   width: 100px;
