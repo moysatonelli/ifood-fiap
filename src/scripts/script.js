@@ -41,3 +41,11 @@ sidebar.addEventListener("mouseover", function () {
   logoIfood.style.height = "100px";
 });
 // FIM SCRIPTS PARA SIDEBAR
+
+const chaticon = document.querySelector(".chatbot-icon");
+
+chaticon.addEventListener("click",function(){
+  console.log("você clicou em mim");
+  const chatbot = document.querySelector(".chat-container");
+  chatbot.style.display = "flex";
+});
