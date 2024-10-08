@@ -42,10 +42,29 @@ sidebar.addEventListener("mouseover", function () {
 });
 // FIM SCRIPTS PARA SIDEBAR
 
+// AQUI VOCÊ PEGOU O CHATICON
 const chaticon = document.querySelector(".chatbot-icon");
 
-chaticon.addEventListener("click",function(){
-  console.log("você clicou em mim");
+// AQUI VOCE COLOCOU UM ESCUTADOR DE EVENTO, PARA QUE QUANDO O USUARIO CLICAR, MUDE O DISPLAY NONE PARA FLEX NO CONTAINER DO CHAT-CONTAINER, COM ISSO APARECE O CHATBOT
+chaticon.addEventListener("click", function () {
+  // PEGUEI O CONTAINER DO CHATBOT
   const chatbot = document.querySelector(".chat-container");
+
+  // SE ELE JA ESTIVER ABERTO
+  if (chatbot.style.display === "flex") {
+    // AQUI ELE FECHA O CONTAINER(SOME DA TELA)
+    chatbot.style.display = "none";
+    // E NAO PASSA DAQUI, OU SEJA nÃO VAI EXECUTAR AS LINHAS PRA BAIXO DAQUI.
+    // COM ISSO O CHATBOT FECHA
+    return;
+  }
+
+  // AQUI SÓ VAI ACONTECER, SE O CHATBOT TIVER A PROPRIEDADE DISPLAY = "NONE" ou seja, ELE VAI ESTAR FECHADO E VAMOS ABRIR
   chatbot.style.display = "flex";
 });
+
+// ALGORITMO PARA FECHAR O CONTAINER DO CHAT]
+// PASSO 1 - PEGAR O ELEMENTO X
+// PASSO 2 - APÓS PEGAR O ELEMENTO, ADICIONAR UM ESCUTADOR
+// PASSO 3 - O ESCUTADO PRECISA TER O EVENTO "CLICK"
+// PASSO 4 - DENTRO DA FUNÇÃO DO ESCUTADO, PRECISO COLOCAR DISPLAY = "NONE" NO CONTAINER DO CHATBOT

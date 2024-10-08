@@ -162,27 +162,34 @@
           <img src="/src/assets/images/icons/Icon-chatbot.svg" alt="Chatbot" />
         </a>
       </div>
-      <div class="chat-container">
-        <div class="header" id="header">
-            <img src="/src/assets/images/logoIfood.svg" id="logo" alt=""/>
+      <div class="father-container">
+        <div class="chat-container">
+          <div class="header" id="header">
+            <img src="/src/assets/images/logoIfood.svg" id="logo" alt="" />
             <p>Chatbot inteligente</p>
-            <a class="maximizar" id="maximize"><img src="./icons/Expandir.svg" alt=""></a>
-            <a class="fechar" id="close"><img src="./icons/Fechar.svg"/></a>
-        </div>
-        
-        <div class="history" id="history">
+            <a class="fechar" id="close"
+              ><img src="/src/components/chatbot/icons/Fechar.svg"
+            /></a>
+          </div>
+
+          <div class="history" id="history">
             <!-- Apenas a mensagem inicial do bot -->
             <div class="bot-message">
-                <p>Olá! Como posso ajudar você?</p>
+              <p>Olá! Como posso ajudar você?</p>
             </div>
+          </div>
+
+          <div class="input-box">
+            <input type="text" id="user-input" placeholder="Escreva aqui..." />
+            <a class="enviar" id="send">
+              <img src="/src/components/chatbot/icons/Enviar.svg" alt="" />
+            </a>
+            <a class="anexar" id="attach"
+              ><img src="/src/components/chatbot/icons/Anexo.svg" alt="" />
+            </a>
+          </div>
         </div>
-        
-        <div class="input-box">
-            <input type="text" id="user-input" placeholder="Escreva aqui..."/>
-            <a class="enviar" id="send"><img src="./icons/Enviar.svg" alt=""></a>
-            <a class="anexar" id="attach"><img src="./icons/Anexo.svg" alt=""></a>
-        </div>
-    </div>
+      </div>
     </main>
   </body>
   <script src="./scripts/script.js"></script>
