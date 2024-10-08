@@ -41,3 +41,55 @@ sidebar.addEventListener("mouseover", function () {
   logoIfood.style.height = "100px";
 });
 // FIM SCRIPTS PARA SIDEBAR
+
+// Início script funcionários e modal
+
+let funcionarios = [
+  {
+    img: 'userEmployee.png',
+    nome: 'Pedro Henrique',
+    cargo: 'estoquista',
+    email: 'pedrohenrique@gmail.com',
+    numeroTelefone: "(11) 96539-0497"
+  },
+  {
+    img: 'userEmployee.png',
+    nome: 'Maria Clara',
+    cargo: 'gerente',
+    email: 'mariaclara@gmail.com',
+    numeroTelefone: "(11) 98765-4321"
+  },
+  {
+    img: 'userEmployee.png',
+    nome: 'João Silva',
+    cargo: 'vendedor',
+    email: 'joaosilva@gmail.com',
+    numeroTelefone: "(11) 99876-5432"
+  },
+  {
+    img: 'userEmployee.png',
+    nome: 'Ana Beatriz',
+    cargo: 'supervisora',
+    email: 'anabeatriz@gmail.com',
+    numeroTelefone: "(11) 91234-5678"
+  }
+];
+
+const containerFuncionarios = document.querySelector(".cards-employee-container");
+
+funcionarios.forEach(funcionario => {
+  const card = document.createElement("div");
+  card.className = 'card-employee';
+
+  card.innerHTML = `
+    <img src="/src/assets/images/${funcionario.img}" alt="User Employee Image" />
+    <strong>${funcionario.nome}</strong>
+    <p>${funcionario.cargo}</p>
+    <span>${funcionario.email}</span>
+    <span>${funcionario.numeroTelefone}</span>
+    <button type="button">Detalhes</button>
+  `;
+
+  containerFuncionarios.appendChild(card)
+})
+

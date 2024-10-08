@@ -214,6 +214,12 @@ main {
   gap: 10px;
 }
 
+.cards-employee-container{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .card-employee {
   width: 415px;
   height: 421px;
@@ -268,4 +274,24 @@ button {
 
 button:hover {
   background-color: var(--red-color);
+}
+
+
+/* Estilo do modal de edição dos funcionários */
+
+#modal-container{
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+#edit-modal{
+  background-color: #fff;
+
+  width: 50vw;
+  margin: auto;
 }
