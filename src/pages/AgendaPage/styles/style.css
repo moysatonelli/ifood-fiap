@@ -14,9 +14,9 @@ body {
 
 /* Estiliza o bloco onde está o nome do dia da semana */
 .fc-col-header-cell {
-  background-color: #d9d9d9; /* Define o fundo vermelho */
-  font-size: 2rem; /* Aumenta o tamanho da fonte */
-  text-align: center; /* Centraliza o texto */
+  background-color: #d9d9d9; 
+  font-size: 2rem; 
+  text-align: center; 
   font-weight: bold;
 }
 
@@ -24,6 +24,41 @@ body {
   background-color: red;
   color: #fff;
 }
+
+.fc-event-title, .fc-event-time {
+  font-size: 1.2rem !important; 
+  
+}
+
+.annualAndMonthly {
+  color: #262626;
+  font-weight: bold;
+}
+
+.weekly {
+  color: #fff;
+}
+
+/* Ícone de deletar que aparece ao passar o mouse no evento */
+.deleteIcon {
+  position: absolute;
+  right: 2px;
+  top: 0;
+  display: none;
+  color: red;
+  background-color: white;
+  padding: 2px 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 100;
+}
+
+/* Exibir o ícone ao passar o mouse sobre o evento */
+.fc-event:hover .deleteIcon {
+  display: block;
+}
+
 
 #calendar .fc-button {
   background-color: red !important;
@@ -38,6 +73,88 @@ body {
 #calendar .fc-button.fc-button-active {
   background-color: #262626 !important;
   color: #fff !important;
+}
+
+.hide{
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Estilos do modal de exclusão de evento */
+
+.modal-confirm {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 26px;
+  cursor: pointer;
+
+}
+
+#delete-container{
+  width: 550px;
+  height: 220px;
+  margin: auto;
+  background-color: #262626;
+  color: #C5C5C5;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+#delete-container > h2{
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+}
+#delete-container > p{
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: .5px;
+}
+
+.buttons{
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  display: flex;
+  gap: 16px;
+}
+
+.buttons > button {
+  border: none;
+  font-size: 16px;
+  padding: 2px;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#cancel-btn{
+  background: transparent;
+  border: solid 1.5px #C5C5C5;
+  color: #C5C5C5;
+}
+#delete-btn{
+  background: #FF0000;
+  color: #fff;
 }
 
 /* Estilos do Modal */

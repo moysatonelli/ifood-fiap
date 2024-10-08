@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/layoutStyle.css" />
@@ -177,6 +178,20 @@
     <!-- Início AGENDA -->
     <main>
       <div id="calendar"></div>
+
+      <div class=" hide">
+        <div id="delete-container">
+          <i class="fa-solid fa-xmark close-modal"></i>
+          
+          <h2>Você tem certeza que deseja excluir esse evento?</h2>
+          <p>Se você excluir esse evento ele não será mais mostrado no calendário</p>
+
+          <div class="buttons">
+            <button id="cancel-btn">cancelar</button>
+            <button id="delete-btn">excluir</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <div id="addEventModal" style="display: none">
@@ -206,5 +221,6 @@
     </div>
 
     <script src="./script.js"></script>
+    <script src="./sidebar.js"></script>
   </body>
 </html>
