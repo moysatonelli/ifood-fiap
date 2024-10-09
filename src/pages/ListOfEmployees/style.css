@@ -256,7 +256,7 @@ main {
   font-weight: 400;
 }
 
-button {
+#details-btn {
   width: 300px;
   height: 45px;
   background-color: #ff6b6b;
@@ -272,7 +272,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+#details-btn:hover {
   background-color: var(--red-color);
 }
 
@@ -287,11 +287,87 @@ button:hover {
   right: 0;
   bottom: 0;
   display: flex;
+
+  overflow: hidden;
 }
 
 #edit-modal{
   background-color: #fff;
-
-  width: 50vw;
+  width: 45vw;
+  height: 650px;
   margin: auto;
+  border-radius: 14px;
+}
+
+#banner{
+  background-color: red;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  position: relative;
+  height: 120px;
+  margin-bottom: 100px;
+}
+
+#profile-pic{
+  width: 165px;
+  height: 165px;
+  background-image: url("../../assets/images/userEmployee.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5), inset 2px 2px 3px rgba(0, 0, 0, 0.3);
+  position: absolute; /* Para posicionar sobre o banner */
+  bottom: -90px; /* Metade da altura da imagem para deixá-la no meio do banner */
+  left: 45px;
+  z-index: 10; 
+}
+
+#header-modal { 
+  /* margin-left: 45px; */
+  padding: 0 45px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #262626;
+}
+
+.title-container > p{
+  color: #606060;
+  font-size: 18px;
+}
+
+.change-settings-container{
+  display: flex;
+  gap: 8px
+}
+
+.change-settings-container > button {
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: .2px;
+  cursor: pointer;
+}
+
+.checked-button{
+  color: #fff;
+  background-color: #262626;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.unchecked-button{
+  background: none;
+}
+
+.divider{
+  height: 1px;
+  background-color: #D3D3D3;
+  margin-top: 15px
 }

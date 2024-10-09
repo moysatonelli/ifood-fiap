@@ -87,7 +87,7 @@ funcionarios.forEach(funcionario => {
     <p>${funcionario.cargo}</p>
     <span>${funcionario.email}</span>
     <span>${funcionario.numeroTelefone}</span>
-    <button type="button">Detalhes</button>
+    <button type="button" id="details-btn">Detalhes</button>
   `;
 
   containerFuncionarios.appendChild(card)
