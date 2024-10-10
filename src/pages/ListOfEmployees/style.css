@@ -214,6 +214,12 @@ main {
   gap: 10px;
 }
 
+.cards-employee-container{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .card-employee {
   width: 415px;
   height: 421px;
@@ -250,7 +256,7 @@ main {
   font-weight: 400;
 }
 
-button {
+#details-btn {
   width: 300px;
   height: 45px;
   background-color: #ff6b6b;
@@ -266,6 +272,325 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+#details-btn:hover {
   background-color: var(--red-color);
+}
+
+
+/* Estilo do modal de edição dos funcionários */
+
+.modal-container{
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+#edit-modal{
+  background-color: #fff;
+  width: 40vw;
+  height: 95vh;
+  padding-bottom: 15px;
+  margin: auto;
+  border-radius: 14px;
+  position: relative;
+}
+
+#banner{
+  background-color: red;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  position: relative;
+  height: 80px;
+  margin-bottom: 80px;
+}
+
+#profile-pic{
+  width: 140px;
+  height: 140px;
+  background-image: url("../../assets/images/userEmployee.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5), inset 2px 2px 3px rgba(0, 0, 0, 0.3);
+  position: absolute; 
+  bottom: -70px; 
+  left: 45px;
+  z-index: 10; 
+  cursor: pointer;
+}
+
+#real-file {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+#header-modal { 
+  padding: 0 45px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #262626;
+}
+
+.title-container > p{
+  color: #606060;
+  font-size: 18px;
+}
+
+.change-settings-container{
+  display: flex;
+  gap: 8px
+}
+
+.change-settings-container > button {
+  border: none;
+  font-weight: bold;
+  letter-spacing: .2px;
+  cursor: pointer;
+}
+
+.checked-button{
+  color: #fff;
+  background-color: #262626;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.unchecked-button{
+  background: none;
+}
+
+.divider{
+  height: 1px;
+  background-color: #D3D3D3;
+}
+
+.hide{
+  display: none;
+}
+
+.edit-form{
+  padding: 15px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+.field{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field > div {
+  width: 70%;
+}
+
+label{
+  font-weight: bold;
+  user-select: none;
+
+}
+
+input, select{
+  width: 100%;
+  border: none;
+  background-color: none;
+  border: 2px solid #A4A4A4;
+  border-radius: 6px;
+  padding: 10px 5px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.fa-dollar-sign {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ícone não interfere na interação com o input */
+  color: #666;
+}
+
+.inputs-container {
+  position: relative;
+  display: flex;
+  gap:15px;
+}
+
+.buttons-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 45px;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  gap: 15px;
+}
+
+.divider-end{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #D3D3D3;
+  left: 0;
+  top: -20px;
+}
+
+.right-btn-container{
+  display: flex;
+  gap: 15px
+}
+
+button{ 
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 8px 25px;
+  cursor: pointer;
+}
+
+#del-employee-btn{
+  background-color: #FF0000;
+  color: #fff;
+}
+
+#cancel-btn{
+  border: solid 1px #555555;
+}
+
+#save-btn{
+  background-color: black;
+  color: #fff;
+}
+
+
+/* ESTILIZAÇÃO DO FORM DE PERMISSÕES */
+
+.align-container-checkbox{
+  display: flex;
+  gap: 15px;
+}
+
+.field-permissions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.toggles-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#permissions-paragraph{
+  font-weight: bold;
+}
+
+.toggle-input {
+  opacity: 0; 
+  position: absolute;
+}
+
+.toggle-label {
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  height: 25px;
+  position: relative;
+  transition: background-color 0.3s;
+  width: 60px;
+}
+
+.toggle-label::after {
+  content: '';
+  background-color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  top:2px;
+  left: 2px;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #000000; /* Cor quando ativado */
+}
+
+.toggle-input:checked + .toggle-label::after {
+  transform: translateX(35px); 
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1440px){
+
+  #edit-modal{
+    width: 50vw;
+  }
+}
+
+@media(max-width: 1060px){
+
+  #edit-modal{
+    width: 60vw;
+  }
+}
+
+@media(max-width: 880px){
+
+  .title-container{
+    font-size: 12px;
+  }
+  
+  .title-container > p{
+    font-size: 16px;
+  }
+
+  button{ 
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+
+}
+
+@media(max-width: 815px){
+
+  .title-container > p{
+    display: none;
+  }
+
 }

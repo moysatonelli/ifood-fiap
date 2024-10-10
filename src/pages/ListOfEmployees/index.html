@@ -171,18 +171,168 @@
       </ul>
     </nav>
     <main>
-      <div class="card-employee">
-        <img
-          src="/src/assets/images/userEmployee.png"
-          alt="User Employee Image"
-        />
-        <strong>João Abreu</strong>
-        <p>Estoquista</p>
-        <span>useremail@gmail.com</span>
-        <span>(11) 1176-4545</span>
-        <button type="button">Detalhes</button>
+
+      <div  class="hide modal-container" >
+
+        <div id="edit-modal">
+
+          <div id="banner">
+            <label for="real-file" id="profile-pic"></label>
+            <input type="file" id="real-file" accept="image/*" />
+          </div>
+
+          <div id="header-modal">
+            <div class="title-container">
+              <h1 id="titleHeader"></h1>
+              <p id="emailHeader"></p>
+            </div>
+            <div class="change-settings-container">
+              <button class="checked-button" id="data-btn">Dados</button>
+              <button class="unchecked-button" id="permission-btn">Permissões</button>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <form action="#" class="edit-form" id="data-form">
+
+            <div class="field">
+
+              <label for="nome">Nome</label>
+
+              <div class="inputs-container">
+                <input type="text" name="nome" id="nome">
+                <input type="text" name="sobrenome" id="sobrenome">
+              </div>
+              
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <div class="inputs-container">
+                <input type="email" name="email" id="email">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="tel">Telefone</label>
+              <div class="inputs-container">
+                <input type="tel" name="tel" id="tel">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="text">Cargo</label>
+              <div class="inputs-container">
+                <select name="cargo" id="cargo">
+                  <option value="" selected disabled>Selecione um cargo</option>
+                  <option value="gerente">Gerente</option>
+                  <option value="chefe_cozinha">Chefe de Cozinha</option>
+                  <option value="auxiliar_cozinha">Auxiliar de Cozinha</option>
+                  <option value="atendente">Atendente</option>
+                  <option value="garcom">Garçom/Garçonete</option>
+                  <option value="entregador">Entregador</option>
+                  <option value="vendedor">Vendedor</option>
+                  <option value="assistente_administrativo">Assistente Administrativo</option>
+                  <option value="caixa">Caixa</option>
+                  <option value="supervisora">Supervisora</option>
+                  <option value="estoquista">Estoquista</option>
+                  <option value="gerente_marketing">Gerente de Marketing</option>
+                  <option value="gerente_pedidos">Gerente de Pedidos</option>
+              </select>
+              </div>
+
+            </div>
+
+            <div class="field">
+              <label for="salario">Salário</label>
+              <div class="inputs-container">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <input type="text" name="salario" id="salario">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="dataContratacao">Data de contratação</label>
+              <div class="inputs-container">
+                <input type="date" name="dataContratacao" id="dataContratacao">
+              </div>
+            </div>
+
+          </form>
+
+          <form action="#" class="hide" id="permissions-form">
+
+            <div class="field-permissions">
+              
+              <p id="permissions-paragraph">Permissões</p>
+
+              <div class="toggles-container">
+
+                <div class="align-container-checkbox">
+                  <div class="inputs-container">
+                    <input type="checkbox" name="admin" id="admin" class="toggle-input">
+                    <label for="admin" class="toggle-label"></label>
+                  </div>
+                  <label for="admin">Admin</label>
+                </div>
+                
+                <div class="align-container-checkbox">
+                  <div class="inputs-container">
+                    <input type="checkbox" name="manage-users" id="manage-users" class="toggle-input">
+                    <label for="manage-users" class="toggle-label"></label>
+                  </div>
+                  <label for="manage-users">Gerenciar outros usuários</label>
+                </div>
+
+                <div class="align-container-checkbox">
+                  <div class="inputs-container">
+                    <input type="checkbox" checked name="access-reports" id="access-reports" class="toggle-input">
+                    <label for="access-reports" class="toggle-label"></label>
+                  </div>
+                  <label for="access-reports">Acesso a relatórios</label>
+                </div>
+                
+                <div class="align-container-checkbox">
+                  <div class="inputs-container">
+                    <input type="checkbox" checked name="Edit-settings" id="Edit-settings" class="toggle-input">
+                    <label for="Edit-settings" class="toggle-label"></label>
+                  </div>
+                  <label for="Edit-settings">Editar configurações</label>
+                </div>
+
+              </div>
+
+            </div>
+            
+            
+
+          </form>
+
+
+
+          <div class="buttons-container">
+
+          <div class="divider-end"></div>
+
+
+            <button id="del-employee-btn">Deletar Funcionário</button>
+
+            <div class="right-btn-container">
+              <button id="cancel-btn">Cancelar</button>
+              <button type="submit" id="save-btn">Salvar</button>
+            </div>
+          </div>
+
+        </div>
+        
       </div>
+        <div class="cards-employee-container">
+      </div>
+      
+
     </main>
   </body>
   <script src="./script.js"></script>
+  <script src="https://kit.fontawesome.com/0ec44f1edc.js" crossorigin="anonymous"></script>
 </html>
