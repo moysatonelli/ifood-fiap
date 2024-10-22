@@ -202,6 +202,7 @@ header > p > span {
 /* FIM SIDEBAR */
 
 main {
+  position: relative;
   margin: 40px;
   padding-left: 60px;
 }
@@ -212,3 +213,209 @@ main > p {
   font-size: 4rem;
   color: #fff;
 }
+
+/* INÍCIO CHATBOT*/
+.sinalizador-chat {
+  color: #fff;
+  background-color: #383838;
+  border: 1px solid rgb(27, 27, 27);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: small;
+  width: fit-content;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1001;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sinalizador-chat:hover {
+  background-color: white;
+  color: black;
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px; /* Distância do fundo da página */
+  right: 20px; /* Distância da lateral direita */
+  z-index: 1000; /* Para garantir que ele fique sobre outros elementos */
+  border-radius: 50%; /* Faz o ícone ficar circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  /*padding: 10px;*/
+}
+
+.chatbot-icon img {
+  width: 50px; /* Tamanho do ícone */
+  height: 50px;
+  cursor: pointer;
+}
+
+.chatbot-icon:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efeito de hover */
+}
+
+.father-container {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  /*top: 0px;*/
+}
+
+.chat-container {
+  width: 400px;
+  height: 700px;
+  min-width: 320px; /* Responsividade para dispositivos móveis */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #4e4e4e;
+  color: #ffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header fixo na parte superior */
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cinza-bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar o header */
+}
+
+/* Logo no header */
+.header img#logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.header p {
+  margin-right: auto;
+  color: var(--branco-bg-color);
+  margin-left: 10px;
+}
+
+/* Botões no header */
+.header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cinza-bg-color);
+  border-radius: 25%;
+  transition: background-color 0.3s ease;
+}
+
+.header a:hover {
+  background-color: #fd6247;
+}
+
+/* BOX DE INTERAÇÃO DO USUÁRIO */
+.input-box {
+  width: 100%;
+  background-color: var(--cinza-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--branco-bg-color);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input dentro do input-box */
+.input-box input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: var(--cinza-bg-color);
+  color: #fff;
+}
+
+/* Botões de enviar e anexar */
+.input-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: var(--cinza-bg-color);
+  border-radius: 25%;
+  transition: background-color 0.3s ease;
+}
+
+.input-box a:hover {
+  background-color: #fff;
+}
+
+.input-box img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Estilo da mensagem do bot (lado esquerdo) */
+.bot-message {
+  background-color: #FF0000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+  max-width: 60%; /* Define uma largura máxima para a mensagem */
+  text-align: left;
+  align-self: flex-start; /* Alinha à esquerda */
+  margin-right: auto; /* Força o alinhamento à esquerda */
+}
+
+/* Estilo da mensagem do usuário (lado direito) */
+.user-message {
+  background-color: #D9D9D9;
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 60%; /* Define uma largura máxima para a mensagem */
+  text-align: left;
+  align-self: flex-end; /* Alinha à direita */
+  margin-left: auto; /* Força o alinhamento à direita */
+}
+
+.user-message p {
+  color: var(--fundo-bg-color);
+  background-color: var(--fu);
+}
+
+/* Para centralizar o conteúdo das mensagens */
+.history {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: calc(
+    100vh - 160px
+  ); /* Ajusta altura para preencher o restante da tela */
+  overflow-y: auto; /* Habilita a rolagem para o histórico */
+  background-color: var(
+    --fundo-bg-color
+  ); /* Define cor de fundo para o histórico */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .bot-message,
+  .user-message {
+    max-width: 80%; /* Aumenta a largura das mensagens em telas menores */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bot-message,
+  .user-message {
+    max-width: 90%; /* Aumenta ainda mais a largura das mensagens em dispositivos móveis */
+  }
+}
+/* FIM CHATBOT*/
