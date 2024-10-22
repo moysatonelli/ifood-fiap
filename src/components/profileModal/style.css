@@ -1,0 +1,20 @@
+body{ 
+    background-color: #383838;
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.modal{
+    background-color: #E9E9E9;
+    width: 70vw;
+    height: 90vh;
+    margin: auto;
+    border-radius: 13px;
+}
