@@ -1,5 +1,6 @@
 body{ 
     background-color: #383838;
+    
 }
 
 .modal-container{
@@ -16,5 +17,21 @@ body{
     width: 70vw;
     height: 90vh;
     margin: auto;
-    border-radius: 13px;
+    border-radius: 8px;
+    display: flex;
+    padding: 15px;
+    box-sizing: border-box;
+    
+}
+
+.options-container{
+    width: 20%;
+    height: 100%;
+}
+
+.option-result{
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    border-radius: 6px;
 }
