@@ -1,4 +1,5 @@
 const optionResult = document.querySelector(".option-result");
+const toggleStatusBtn = document.getElementById("toggle-status-restaurant")
 
 document.querySelector(".header-options-container").addEventListener("click", () =>{
     optionResult.innerHTML = `<form action="" class="profile-form">
@@ -104,4 +105,71 @@ document.getElementById("restaurant-data").addEventListener("click", () =>{
                         <button class="save-btn" type="submit">Salvar</button>
                     </div>
                 </form>`
+})
+
+document.getElementById("restaurant-settings").addEventListener("click", () =>{
+    optionResult.innerHTML = ` <form action="">
+                    <h1>Configurações Operacionais</h1>
+                   
+                   
+
+                    <div class="fields">
+                        <div class="left-fields">
+                            <div class="field">
+                                <label for="restaurant-status">Status do Restaurante</label>
+                                <button id="toggle-status-restaurant" class="toggle-status-btn-open ">aberto</button>
+                            </div>
+                            <div class="field">
+                                <label for="restaurant-delivery-value">Taxa de entrega</label>
+                                <input type="number" id="restaurant-delivery-value">
+                            </div>
+                            <div class="field">
+                                <label for="profile-nasc">Raio da Área de Entrega (km)</label>
+                                <input type="number" id="profile-nasc">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7630262912417!2d-46.73659782505752!3d-23.541024178813757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8a6b0e6b435%3A0x6539c61690d9cf06!2sAv.%20Manuel%20Bandeira%2C%20360%20-%20Vila%20Leopoldina%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005317-020!5e0!3m2!1spt-PT!2sbr!4v1729702931771!5m2!1spt-PT!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+    
+                        <div class="right-fields">
+                            <div class="field">
+                                <label for="restaurant-max-orders">Capacidade de Pedidos por Hora</label>
+                                <input type="number" id="restaurant-max-orders">
+                            </div>
+                            
+                            <div class="field ">
+                                <label for="restaurant-payments">Formas de Pagamento</label>
+                                <div class="paymment-method-container">
+                                    <div class="paymment-method">
+                                        <label for="pix">Pix</label>
+                                        <input type="checkbox" id="pix">
+                                    </div>
+                                    <div class="paymment-method">
+                                        <label for="credit-card">Cartão de Crédito</label>
+                                        <input type="checkbox" id="credit-card">
+                                    </div>
+                                    <div class="paymment-method">
+                                        <label for="meal-voucher">Vale Refeição</label>
+                                        <input type="checkbox" id="meal-voucher">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="buttons-form-profile">
+                        <button class="exit-btn">Sair da Conta</button>
+                        <button class="save-btn" type="submit">Salvar</button>
+                    </div>
+                    
+                </form>`
+})
+
+toggleStatusBtn.addEventListener("click", (e)=>{
+    e.preventDefault()
+    if(toggleStatusBtn.innerHTML == "aberto") {
+        toggleStatusBtn.innerHTML = "fechado"
+    } else {
+        toggleStatusBtn.innerHTML = "aberto"
+    }
+    toggleStatusBtn.classList.toggle("toggle-status-btn-close")
 })

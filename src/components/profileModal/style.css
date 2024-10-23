@@ -32,7 +32,6 @@ body{
 .option-result{
     background-color: #fff;
     width: 70%;
-    height: 100%;
     border-radius: 6px;
     box-sizing: border-box;
     padding: 20px;
@@ -146,12 +145,13 @@ body{
 
 /* ESTILIZAÇÃO DO FORMULÁRIO DE DADOS PESSOAIS */
 
-.profile-form{
+form{
     display: flex;
     flex-direction: column;
     gap: 55px;
     position: relative;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .change-picture{
@@ -185,6 +185,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 5px;
+
 }
 
 .field > input, .field > select{
@@ -208,6 +209,7 @@ body{
     padding: 8px 15px;
     border-radius: 4px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .save-btn{
@@ -217,4 +219,75 @@ body{
     padding: 8px 15px;
     border-radius: 4px;
     font-size: 16px;
+    cursor: pointer;
+
 }
+
+/* ESTILIZAÇÃO DO FORM DE CONFIGURAÇÕES OPERACIONAIS */
+
+.paymment-method-container{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    user-select: none;
+}
+
+.paymment-method{
+    display: flex;
+    justify-content: space-between;
+}
+.paymment-method > label{
+    cursor: pointer;
+}
+
+.paymment-method input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transform: scale(1.5); 
+    accent-color: #007bff; 
+}
+
+.left-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+iframe{
+    height: 180px;
+    margin-top: 5px;
+}
+
+.right-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#toggle-status-restaurant{
+    text-transform: uppercase;
+    border: none;
+    padding: 2px;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.toggle-status-btn-open{
+    background-color: #3ABA47;
+    color: #fff;
+}
+
+.toggle-status-btn-close{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* ESTILIZAÇÃO DE CARDÁPIO */
+
