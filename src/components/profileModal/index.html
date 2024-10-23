@@ -7,21 +7,21 @@
     <title>Modal Perfil</title>
 </head>
 <body>
-    <div class="modal-container">
+    <div class="modal-modal-container">
         
-        <div class="modal">
+        <div class="modal-modal">
             
             <!-- CONTAINER DA ESQUERDA | OPÇÕES -->
-            <div class="options-container">
-                <div class="header-options-container">
+            <div class="modal-options-container">
+                <div class="modal-header-options-container">
 
                     <span>Conta</span>
 
-                    <div class="profile-area">
-                        <div class="picture-container">
-                            <div class="picture"></div>
+                    <div class="modal-profile-area">
+                        <div class="modal-picture-container">
+                            <div class="modal-picture"></div>
                             
-                            <div class="infos-user">
+                            <div class="modal-infos-user">
                                 <p>João Roberto da Silva</p>
                                 <span>Gerente</span>
                             </div>
@@ -30,36 +30,36 @@
                         <button>Editar</button>
                     </div>
 
-                    <div class="line-divider"></div>
+                    <div class="modal-line-divider"></div>
                 </div>
 
-                <div class="options-select">
+                <div class="modal-options-select">
                     <span>Geral</span>
 
-                    <div class="options">
+                    <div class="modal-options">
 
-                        <div class="option" id="restaurant-data">
+                        <div class="modal-option" id="modal-restaurant-data">
                             <i class="fa-solid fa-utensils"></i>
                             <p>Dados do Restaurante</p>
                         </div>
 
-                        <div class="option" id="restaurant-settings">
+                        <div class="modal-option" id="modal-restaurant-settings">
                             <i class="fa-solid fa-gear"></i>
                             <p>Configurações Operacionais</p>
                         </div>
-                        <div class="option">
+                        <div class="modal-option" id="modal-restaurant-menu">
                             <i class="fa-solid fa-book-open-reader"></i>
                             <p>Cardápio</p>
                         </div>
-                        <div class="option">
+                        <div class="modal-option" id="modal-restaurant-special-hours">
                             <i class="fa-solid fa-clock"></i>
                             <p>Horários Especiais</p>
                         </div>
-                        <div class="option">
+                        <div class="modal-option" id="modal-restaurant-alerts">
                             <i class="fa-solid fa-bell"></i>
                             <p>Notificações</p>
                         </div>
-                        <div class="option">
+                        <div class="modal-option" id="modal-restaurant-coupons">
                             <i class="fa-solid fa-gifts"></i>
                             <p>Promoções e Cupons</p>
                         </div>
@@ -69,84 +69,60 @@
                 </div>
             </div>
             <!-- CONTAINER DIREITO | OPÇÃO SELECIONADA -->
-            <div class="option-result">
+            <div class="modal-option-result">
                
-                <h1>Cardápio</h1>
-
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Preço</th>
-                        <th>Categoria</th>
-                        <th>Remover Prato</th>
-                    </tr>
-                    <tr>
-                        <td>Hambúrguer Clássico</td>
-                        <td>24,90</td>
-                        <td>Prato Principal</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Pizza Marguerita</td>
-                        <td>45,00</td>
-                        <td>Prato Principal</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Frango à Parmegiana</td>
-                        <td>32,50</td>
-                        <td>Prato Principal</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Salada Caesar</td>
-                        <td>19,90</td>
-                        <td>Entradas</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Espaguete à Carbonara</td>
-                        <td>27,00</td>
-                        <td>Prato Principal</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Risoto de Cogumelos</td>
-                        <td>39,90</td>
-                        <td>Prato Principal</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Brownie de Chocolate</td>
-                        <td>12,50</td>
-                        <td>Sobremesas</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Mousse de Maracujá</td>
-                        <td>10,00</td>
-                        <td>Sobremesas</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Refrigerante Lata</td>
-                        <td>5,00</td>
-                        <td>Bebidas</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                    <tr>
-                        <td>Cerveja Artesanal</td>
-                        <td>12,00</td>
-                        <td>Bebidas</td>
-                        <td><button>REMOVER</button></td>
-                    </tr>
-                </table>
                 
+                <form action="" class="modal-form">
+                    <div class="modal-change-picture">
+                        <div class="modal-profile-picture"></div>
+                        <label for="upload-picture" class="modal-upload-picture">Carregar Imagem</label>
+                        <input type="file" id="upload-picture" hidden>
 
+                    </div>
+                    <div class="modal-fields">
+                        <div class="modal-field">
+                            <label for="profile-name">Nome do Perfil</label>
+                            <input type="text" id="profile-name">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-email">E-mail</label>
+                            <input type="email" id="profile-email">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-tel">Número de Telefone</label>
+                            <input type="tel" id="profile-tel">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-acess">Nível de Acesso</label>
+                            <select disabled name="profile-acess" id="profile-acess">
+                                <option value="gerente">Gerente</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="supervisor">Supervisor</option>
+                                <option value="analista">Analista</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-alert">Preferência de Notificação</label>
+                            <select name="profile-alert" id="profile-aler">
+                                <option value="SMS">SMS</option>
+                                <option value="whatsapp">Whatsapp</option>
+                                <option value="email">email</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-nasc">Data de Nascimento</label>
+                            <input type="date" id="profile-nasc">
+                        </div>
+                    </div>
+                    <div class="modal-buttons-form-profile">
+                        <button class="modal-exit-btn"><a href="../../pages/LoginPage/index.html">Sair da Conta</a></button>
+                        <button class="modal-save-btn" type="submit">Salvar</button>
+                    </div>
+                </form>
+                
             </div>
-
+            
         </div>
-    
     </div>
     <script src="https://kit.fontawesome.com/0ec44f1edc.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
