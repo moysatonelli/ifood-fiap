@@ -1,15 +1,17 @@
 body{ 
-    background-color: #383838;
     font-family: Roboto, sans-serif;
 }
 
 .modal-modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
-    display: flex;
+    left: 0;
+    display: none;
     align-items: center;
+    z-index: 10000;
 }
 
 .modal-modal{
@@ -20,8 +22,18 @@ body{
     border-radius: 8px;
     display: flex;
     padding: 15px;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
+    position: relative;
+ 
+}
+
+.modal-close-modal {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 100000;
 }
 
 .modal-options-container{
@@ -46,13 +58,13 @@ body{
     gap: 15px;
 }
 
-.modal-profile-area{
+.modal-modal-profile-area{
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     flex-wrap: wrap;
-    gap: 15px
+    gap: 20px
 }
 
 .modal-picture-container{

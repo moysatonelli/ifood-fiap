@@ -1,4 +1,6 @@
 const optionResult = document.querySelector(".modal-option-result");
+const modal = document.querySelector(".modal-modal-container")
+
 
 document.querySelector(".modal-header-options-container").addEventListener("click", () =>{
     optionResult.innerHTML = `<form action="" class="modal-form">
@@ -165,7 +167,6 @@ document.getElementById("modal-restaurant-settings").addEventListener("click", (
         toggleStatusBtn.classList.toggle("modal-toggle-status-btn-close");
     });
 });
-
 
 document.getElementById("modal-restaurant-menu").addEventListener("click", () =>{
     optionResult.innerHTML = `<form action="" class="modal-form">
@@ -419,4 +420,12 @@ document.getElementById("modal-restaurant-coupons").addEventListener("click", ()
                         <button class="modal-save-btn" type="submit">Salvar</button>
                     </div>
                 </form>`
+})
+
+document.querySelector(".modal-close-modal").addEventListener("click", ()=>{
+    modal.style.display = "none";
+})
+
+document.querySelector(".perfil-user").addEventListener("click", () =>{
+    modal.style.display = "flex";
 })

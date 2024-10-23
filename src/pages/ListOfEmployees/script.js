@@ -117,7 +117,7 @@ funcionarios.forEach(funcionario => {
 
 // Seleção dos elementos DOM
 
-const modal = document.querySelector(".modal-container");
+const modalEmployee = document.querySelector(".modal-container");
 
 const titleHeader = document.querySelector(".titleHeader")
 const emailHeader = document.querySelector(".emailHeader")
@@ -194,8 +194,8 @@ function openModal(funcionario) {
 
   //mostrar modal
 
-  modal.classList.add("modal-container");
-  modal.classList.remove("hide");
+  modalEmployee.classList.add("modal-container");
+  modalEmployee.classList.remove("hide");
 
   //selecionando imagem
 
@@ -333,7 +333,7 @@ function deleteEmployee(funcionario) {
 
 // Função para fechar o modal
 function closeModal() {
-  modal.classList.remove("modal-container");
-  modal.classList.add("hide");
+  modalEmployee.classList.remove("modal-container");
+  modalEmployee.classList.add("hide");
 }
 
