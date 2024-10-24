@@ -4,7 +4,7 @@ const notifications = [
     from: "Ifood",
     title: "Reposição de estoque",
     message:
-      "Olá Thiago! Você sabia que agora novos parceiros do Ifood possuem benefícios de afiliados também!? É isso aí! De agora em diante você terá um link que, quando divulgado para novos potenciais parceiros Ifood, você recebe comissão recorrente se realizar o cadastro pelo seu link! Para habilitar seu link de afiliado, entre em contato",
+      "Olá Thiago! Você sabia que agora novos parceiros do Ifood possuem benefícios de afiliados também!? É isso aí! De agora em diante você terá um link que, quando divulgado para novos potenciais parceiros Ifood, você recebe comissão recorrente se realizar o cadastro pelo seu link!",
     read: false,
   },
   {

@@ -224,6 +224,12 @@ h1 {
   font-size: 2rem;
 }
 
+.message-container{
+  display: flex;
+  width: 100%;
+  gap: 30px
+}
+
 #messages-list {
   display: flex;
   flex-direction: column;

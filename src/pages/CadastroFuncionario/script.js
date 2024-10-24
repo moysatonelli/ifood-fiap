@@ -112,3 +112,6 @@ photoInput.addEventListener("change", function () {
     reader.readAsDataURL(file);
   }
 });
+
+
+

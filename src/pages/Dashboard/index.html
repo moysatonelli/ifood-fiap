@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles/layoutStyle.css" />
     <link rel="stylesheet" href="./styles/dashboard.css" />
     <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../components/profileModal/style.css">
     <title>Dashboard</title>
   </head>
   <body>
@@ -424,6 +425,126 @@
           <canvas id="chart-expense" width="300px" height="250px"></canvas>
         </div>
       </div>
+
+      <!-- MODAL DE PERFIL -->
+
+      <div class="modal-modal-container" >
+        
+        <div class="modal-modal">
+            <i class="fa-solid fa-xmark modal-close-modal"></i>
+            <!-- CONTAINER DA ESQUERDA | OPÇÕES -->
+            <div class="modal-options-container">
+                <div class="modal-header-options-container">
+
+                    <span>Conta</span>
+
+                    <div class="modal-modal-profile-area">
+                        <div class="modal-picture-container">
+                            <div class="modal-picture"></div>
+                            
+                            <div class="modal-infos-user">
+                                <p>João Roberto da Silva</p>
+                                <span>Gerente</span>
+                            </div>
+                        </div>
+                        
+                        <button>Editar</button>
+                    </div>
+
+                    <div class="modal-line-divider"></div>
+                </div>
+
+                <div class="modal-options-select">
+                    <span>Geral</span>
+
+                    <div class="modal-options">
+
+                        <div class="modal-option" id="modal-restaurant-data">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>Dados do Restaurante</p>
+                        </div>
+
+                        <div class="modal-option" id="modal-restaurant-settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <p>Configurações Operacionais</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-menu">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                            <p>Cardápio</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-special-hours">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>Horários Especiais</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-alerts">
+                            <i class="fa-solid fa-bell"></i>
+                            <p>Notificações</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-coupons">
+                            <i class="fa-solid fa-gifts"></i>
+                            <p>Promoções e Cupons</p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <!-- CONTAINER DIREITO | OPÇÃO SELECIONADA -->
+            <div class="modal-option-result">
+                
+                <form action="" class="modal-form">
+                    <div class="modal-change-picture">
+                        <div class="modal-profile-picture"></div>
+                        <label for="upload-picture" class="modal-upload-picture">Carregar Imagem</label>
+                        <input type="file" id="upload-picture" hidden>
+
+                    </div>
+                    <div class="modal-fields">
+                        <div class="modal-field">
+                            <label for="profile-name">Nome do Perfil</label>
+                            <input type="text" id="profile-name">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-email">E-mail</label>
+                            <input type="email" id="profile-email">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-tel">Número de Telefone</label>
+                            <input type="tel" id="profile-tel">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-acess">Nível de Acesso</label>
+                            <select disabled name="profile-acess" id="profile-acess">
+                                <option value="gerente">Gerente</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="supervisor">Supervisor</option>
+                                <option value="analista">Analista</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-alert">Preferência de Notificação</label>
+                            <select name="profile-alert" id="profile-aler">
+                                <option value="SMS">SMS</option>
+                                <option value="whatsapp">Whatsapp</option>
+                                <option value="email">email</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-nasc">Data de Nascimento</label>
+                            <input type="date" id="profile-nasc">
+                        </div>
+                    </div>
+                    <div class="modal-buttons-form-profile">
+                        <button class="modal-exit-btn"><a href="../../pages/LoginPage/index.html">Sair da Conta</a></button>
+                        <button class="modal-save-btn" type="submit">Salvar</button>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+
       <!-- Início Chatbot -->>
       <div class="sinalizador-chat">
         <p>Dúvidas? <br> Use o Chatbot</p>
@@ -459,8 +580,10 @@
           </div>
         </div>
       </div>
-      <!-- Fim Chatbot -->>        
+      <!-- Fim Chatbot -->>
     </main>
+    <script src="https://kit.fontawesome.com/0ec44f1edc.js" crossorigin="anonymous"></script>
+    <script src="../../components/profileModal/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scripts/chart.js"></script>
     <script src="./scripts/layout.js"></script>
