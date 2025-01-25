@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <script
+      src="https://kit.fontawesome.com/0ec44f1edc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <section class="form-section">
+        <p id="welcome-text">Bem vindo</p>
+        <p id="title">Parceiro</p>
+
+        <form id="login">
+          <div class="input-container">
+            <label for="email">E-mail:</label>
+            <div id="email-input">
+              <input type="email" id="email" />
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="password">Senha:</label>
+            <div id="password-input">
+              <input type="password" id="password" />
+              <i class="toggle-password fa-regular fa-eye-slash"></i>
+            </div>
+          </div>
+          <label class="custom-checkbox">
+            <input type="checkbox" id="checkbox" />
+            <span class="checkmark"></span>
+            Lembrar de mim
+          </label>
+
+          <button type="submit" id="enter-btn">entrar</button>
+
+          <p>Novo aqui? <span>Faça cadastro agora!</span></p>
+        </form>
+      </section>
+      <section class="slide-section">
+        <div id="slides">
+          <input type="radio" name="radio-btn" id="radio1" checked />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+
+          <div
+            class="slide first"
+            style="background-image: url('./img/first-slide.png')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./img/second-slide.png')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./img/third-slide.png')"
+          ></div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+        </div>
+
+        <div class="manual-navigation">
+          <div class="navigation-container">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

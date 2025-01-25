@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/layoutStyle.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../components/profileModal/style.css">
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span>Dashboard</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img src="./../../assets/images/icons/homeIcon.svg" alt="home icon" />
+          <a href="/src/pages/Dashboard/index.html">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/pedidos/index.html">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/AgendaPage/index.html">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/mensagens/index.html">Mensagens</a>
+        </li>
+
+        <li>
+          <img
+            src="./../../assets/images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/Analytics/index.html">Analytics</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/Analytics/index.html">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/ReportsTransactions/index.html">Transações</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/RequestedTransactions/index.html"
+                  >Transações Solicitadas</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/RequestedsTransactionsAll/index.html"
+                  >Transações - Ver Todas</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/Reports/index.html">Relatórios</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/Reports/index.html">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/src/pages/ReportsOrders/index.html"
+                  >Relatório de Pedidos</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/ReportsTransactions/index.html"
+                  >Relatórios Transações</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets/images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/ListOfEmployees/index.html">Configurações</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="../ContasRecebimento/index.html"
+                  >Contas de Recebimento</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/CadastroFuncionario/index.html"
+                  >Cadastro de Funcionário</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/ListOfEmployees/index.html"
+                  >Lista de Funcionário</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- Fim layout -->
+
+    <!-- Começo dashboard -->
+    <main>
+      <div class="top-card orders">
+        <p>Pedidos hoje</p>
+        <h2>450</h2>
+        <span>+ 18,75%</span>
+        <img src="./img/top-data/orders-icon.svg" alt="icone de pedidos hoje" />
+      </div>
+      <div class="top-card revenue">
+        <p>Receita diária</p>
+        <h2>R$ 999,99</h2>
+        <span>+ 18,75%</span>
+        <img
+          src="./img/top-data/revenue-icon.svg"
+          alt="icone de pedidos hoje"
+        />
+      </div>
+      <div class="top-card clients">
+        <p>Total clientes hoje</p>
+        <h2>250</h2>
+        <span>+ 18,75%</span>
+        <img
+          src="./img/top-data/clients-icon.svg"
+          alt="icone de pedidos hoje"
+        />
+      </div>
+      <div class="top-card expenses">
+        <p>Total de Despesas</p>
+        <h2>R$ 99,00</h2>
+        <span class="expenses-span"> -15,63% </span>
+
+        <img
+          src="./img/top-data/expenses-icon.svg"
+          alt="icone de pedidos hoje"
+        />
+      </div>
+
+      <div class="revenue-card">
+        <div class="change-view">
+          <button
+            onclick="updateChart('semanal')"
+            id="weekly-btn"
+            class="inactive selected"
+          >
+            Semanal
+          </button>
+          <button
+            onclick="updateChart('mensal')"
+            id="month-btn"
+            class="inactive"
+          >
+            Mensal
+          </button>
+          <button onclick="updateChart('anual')" id="year-btn" class="inactive">
+            Anual
+          </button>
+        </div>
+
+        <div class="top-data">
+          <p>receita</p>
+          <h1>5.987,34</h1>
+        </div>
+        <div class="line"></div>
+        <div class="chart">
+          <canvas id="chart" width="600px" height="250px"></canvas>
+        </div>
+      </div>
+
+      <div class="resume-orders">
+        <h1>resumo pedidos</h1>
+
+        <table>
+          <tr>
+            <th>ID Pedido</th>
+            <th>Data</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Status</th>
+            <th>Pagamento</th>
+            <th>Categoria</th>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">#11111</td>
+            <td>10/05/2024</td>
+            <td>João</td>
+            <td>R$ 43,35</td>
+            <td>
+              <div class="status completed">
+                <p>Concluido</p>
+              </div>
+            </td>
+            <td>Cartão</td>
+            <td>Lanches</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">#22222</td>
+            <td>10/05/2024</td>
+            <td>Julia</td>
+            <td>R$ 43,35</td>
+            <td>
+              <div class="status completed">
+                <p>Concluido</p>
+              </div>
+            </td>
+            <td>Pix</td>
+            <td>Lanches</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">#33333</td>
+            <td>10/05/2024</td>
+            <td>Carlos</td>
+            <td>R$ 43,35</td>
+            <td>
+              <div class="status pending">
+                <p>Pendente</p>
+              </div>
+            </td>
+            <td>Pix</td>
+            <td>Lanches</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">#44444</td>
+            <td>10/05/2024</td>
+            <td>Roberto</td>
+            <td>R$ 43,35</td>
+            <td>
+              <div class="status canceled">
+                <p>Cancelado</p>
+              </div>
+            </td>
+            <td>Cartão</td>
+            <td>Lanches</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">#55555</td>
+            <td>10/05/2024</td>
+            <td>Maria</td>
+            <td>R$ 43,35</td>
+            <td>
+              <div class="status pending">
+                <p>Pendente</p>
+              </div>
+            </td>
+            <td>Dinheiro</td>
+            <td>Lanches</td>
+          </tr>
+        </table>
+      </div>
+      <div class="popular-orders">
+        <h2>pedidos populares</h2>
+
+        <div class="order">
+          <div id="figure1"></div>
+          <div>
+            <p style="font-weight: 700">Pizza de Atum</p>
+            <div class="bar-container">
+              <div id="bar1"></div>
+              <p style="font-weight: 700">200</p>
+            </div>
+          </div>
+        </div>
+        <div class="order">
+          <div id="figure2"></div>
+          <div>
+            <p style="font-weight: 700">Esfiha Fechada</p>
+            <div class="bar-container">
+              <div id="bar2"></div>
+              <p style="font-weight: 700">185</p>
+            </div>
+          </div>
+        </div>
+        <div class="order">
+          <div id="figure3"></div>
+          <div>
+            <p style="font-weight: 700">Coxinha de Frango</p>
+            <div class="bar-container">
+              <div id="bar3"></div>
+              <p style="font-weight: 700">160</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <h2>Equipe</h2>
+
+        <div class="employee-container">
+          <div>
+            <img src="./img/team-section/chief-icon.svg" alt="" />
+            <p style="font-weight: 700">Chefe</p>
+          </div>
+          <p>2</p>
+        </div>
+        <div class="employee-container">
+          <div>
+            <img src="./img/team-section/waiter-icon.svg" alt="" />
+            <p style="font-weight: 700">Entregador</p>
+          </div>
+          <p>4</p>
+        </div>
+        <div class="employee-container">
+          <div>
+            <img src="./img/team-section/cashier-icon.svg" alt="" />
+            <p style="font-weight: 700">Atendente</p>
+          </div>
+          <p>2</p>
+        </div>
+        <div class="employee-container">
+          <div>
+            <img src="./img/team-section/chief-icon.svg" alt="" />
+            <p style="font-weight: 700">Outro</p>
+          </div>
+          <p>1</p>
+        </div>
+      </div>
+
+      <div class="expenses-card">
+        <div class="index">
+          <h2>Despesas Operacionais</h2>
+          <div class="list">
+            <span>01</span>
+            <p>Utilidades</p>
+          </div>
+          <div class="list">
+            <span>02</span>
+            <p>Salários e Benefícios</p>
+          </div>
+          <div class="list">
+            <span>03</span>
+            <p>Marketing</p>
+          </div>
+          <div class="list">
+            <span>04</span>
+            <p>Manutenção</p>
+          </div>
+          <div class="list">
+            <span>05</span>
+            <p>Suprimentos e Materiais</p>
+          </div>
+          <div class="list">
+            <span>06</span>
+            <p>Taxas</p>
+          </div>
+        </div>
+        <div class="chart-expense">
+          <canvas id="chart-expense" width="300px" height="250px"></canvas>
+        </div>
+      </div>
+
+      <!-- MODAL DE PERFIL -->
+
+      <div class="modal-modal-container" >
+        
+        <div class="modal-modal">
+            <i class="fa-solid fa-xmark modal-close-modal"></i>
+            <!-- CONTAINER DA ESQUERDA | OPÇÕES -->
+            <div class="modal-options-container">
+                <div class="modal-header-options-container">
+
+                    <span>Conta</span>
+
+                    <div class="modal-modal-profile-area">
+                        <div class="modal-picture-container">
+                            <div class="modal-picture"></div>
+                            
+                            <div class="modal-infos-user">
+                                <p>João Roberto da Silva</p>
+                                <span>Gerente</span>
+                            </div>
+                        </div>
+                        
+                        <button>Editar</button>
+                    </div>
+
+                    <div class="modal-line-divider"></div>
+                </div>
+
+                <div class="modal-options-select">
+                    <span>Geral</span>
+
+                    <div class="modal-options">
+
+                        <div class="modal-option" id="modal-restaurant-data">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>Dados do Restaurante</p>
+                        </div>
+
+                        <div class="modal-option" id="modal-restaurant-settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <p>Configurações Operacionais</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-menu">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                            <p>Cardápio</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-special-hours">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>Horários Especiais</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-alerts">
+                            <i class="fa-solid fa-bell"></i>
+                            <p>Notificações</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-coupons">
+                            <i class="fa-solid fa-gifts"></i>
+                            <p>Promoções e Cupons</p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <!-- CONTAINER DIREITO | OPÇÃO SELECIONADA -->
+            <div class="modal-option-result">
+                
+                <form action="" class="modal-form">
+                    <div class="modal-change-picture">
+                        <div class="modal-profile-picture"></div>
+                        <label for="upload-picture" class="modal-upload-picture">Carregar Imagem</label>
+                        <input type="file" id="upload-picture" hidden>
+
+                    </div>
+                    <div class="modal-fields">
+                        <div class="modal-field">
+                            <label for="profile-name">Nome do Perfil</label>
+                            <input type="text" id="profile-name">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-email">E-mail</label>
+                            <input type="email" id="profile-email">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-tel">Número de Telefone</label>
+                            <input type="tel" id="profile-tel">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-acess">Nível de Acesso</label>
+                            <select disabled name="profile-acess" id="profile-acess">
+                                <option value="gerente">Gerente</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="supervisor">Supervisor</option>
+                                <option value="analista">Analista</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-alert">Preferência de Notificação</label>
+                            <select name="profile-alert" id="profile-aler">
+                                <option value="SMS">SMS</option>
+                                <option value="whatsapp">Whatsapp</option>
+                                <option value="email">email</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-nasc">Data de Nascimento</label>
+                            <input type="date" id="profile-nasc">
+                        </div>
+                    </div>
+                    <div class="modal-buttons-form-profile">
+                        <button class="modal-exit-btn"><a href="../../pages/LoginPage/index.html">Sair da Conta</a></button>
+                        <button class="modal-save-btn" type="submit">Salvar</button>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+
+      <!-- Início Chatbot -->
+      <div class="sinalizador-chat">
+        <p>Dúvidas? <br> Use o Chatbot</p>
+      </div>
+      <div class="chatbot-icon">
+        <a href="#">
+          <img src="/src/assets/images/icons/Icon-chatbot.svg" alt="Chatbot" />
+        </a>
+      </div>
+      <div class="father-container">
+        <div class="chat-container">
+          <div class="header" id="header">
+            <img src="/src/assets/images/logoIfood.svg" id="logo" alt="" />
+            <p>Chatbot inteligente</p>
+            <a class="fechar" id="close">
+              <img src="/src/components/chatbot/icons/Fechar.svg" alt="" />
+            </a>
+          </div>
+          <div class="history" id="history">
+            <!-- Apenas a mensagem inicial do bot -->
+            <div class="bot-message">
+              <p>Olá! Como posso ajudar você?</p>
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="text" id="user-input" placeholder="Escreva aqui..." />
+            <a class="enviar" id="send">
+              <img src="/src/components/chatbot/icons/Enviar.svg" alt="" />
+            </a>
+            <a class="anexar" id="attach">
+              <img src="/src/components/chatbot/icons/Anexo.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Chatbot -->
+    </main>
+    <script src="https://kit.fontawesome.com/0ec44f1edc.js" crossorigin="anonymous"></script>
+    <script src="../../components/profileModal/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./scripts/chart.js"></script>
+    <script src="./scripts/layout.js"></script>
+  </body>
+</html>

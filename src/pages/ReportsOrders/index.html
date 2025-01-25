@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../components/profileModal/style.css" />
+    <link rel="stylesheet" href="./../../styles/global.css" />
+    <title>Relatórios - Relatórios de Pedidos</title>
+  </head>
+  <body>
+    <header>
+      <p>Você está em: <span> Relatórios - Relatórios de Pedidos</span></p>
+      <div class="user-details">
+        <img
+          src="./../../assets/lightOrDark.svg"
+          alt="Alterar modo claro ou escuro"
+        />
+        <img
+          src="./../../assets/notificationIcon.svg"
+          alt="Aviso de notificação"
+        />
+        <p>Usuário</p>
+        <div class="perfil-user">
+          <img src="./../../assets/user.png" alt="User profile" />
+        </div>
+      </div>
+    </header>
+    <!-- Container Navigation Ifood -->
+    <nav class="sidebar">
+      <!-- Container Logo Ifood -->
+      <div class="container-top-logo">
+        <img
+          src="./../../assets/images/logoIfood.svg"
+          alt="Ifood Logo"
+          class="logo"
+        />
+      </div>
+      <hr />
+      <ul>
+        <li>
+          <img src="./../../assets/images/icons/homeIcon.svg" alt="home icon" />
+          <a href="/src/pages/Dashboard/index.html">Dashboard</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/pedidosIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/pedidos/index.html">Pedidos</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/agendaIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/AgendaPage/index.html">Agenda</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/mensagensIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/mensagens/index.html">Mensagens</a>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/analyticIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/Analytics/index.html">Analytics</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/Analytics/index.html">Gráficos</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/dolarIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/ReportsTransactions/index.html">Transações</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/RequestedTransactions/index.html"
+                  >Transações Solicitadas</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/RequestedsTransactionsAll/index.html"
+                  >Transações - Ver Todas</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <img
+            src="./../../assets/images/icons/relatorioIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/Reports/index.html">Relatórios</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="/src/pages/Reports/index.html">Download Relatórios</a>
+              </li>
+              <li>
+                <a href="/src/pages/ReportsOrders/index.html"
+                  >Relatório de Pedidos</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/ReportsTransactions/index.html"
+                  >Relatórios Transações</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="./../../assets/images/icons/configIcon.svg"
+            alt="home icon"
+          />
+          <a href="/src/pages/ListOfEmployees/index.html">Configurações</a>
+          <img
+            src="./../../assets/images/icons/arowRight.svg"
+            alt="home icon"
+            class="arrow"
+          />
+          <div class="sub-nav">
+            <ul>
+              <li>
+                <a href="../ContasRecebimento/index.html"
+                  >Contas de Recebimento</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/CadastroFuncionario/index.html"
+                  >Cadastro de Funcionário</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/ListOfEmployees/index.html"
+                  >Lista de Funcionário</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <strong>10 pedidos encontrados</strong>
+      <table>
+        <thead>
+          <tr>
+            <th># Pedido</th>
+            <th>Nome Cliente</th>
+            <th>Total do Pedido</th>
+            <th>Status</th>
+            <th>Cupom</th>
+            <th>Desconto</th>
+            <th>Data do pedido</th>
+            <th>Ultima alteração</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>João Silva</td>
+            <td>R$ 350,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: orange;
+                  color: white;
+                "
+                >Processando</span
+              >
+            </td>
+            <td>BLACKFRIDAY</td>
+            <td>15%</td>
+            <td>2024-10-01</td>
+            <td>2024-10-03</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Maria Oliveira</td>
+            <td>R$ 220,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: blue;
+                  color: white;
+                "
+                >Enviado</span
+              >
+            </td>
+            <td>WELCOME10</td>
+            <td>10%</td>
+            <td>2024-09-29</td>
+            <td>2024-10-02</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Carlos Souza</td>
+            <td>R$ 1.100,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: green;
+                  color: white;
+                "
+                >Entregue</span
+              >
+            </td>
+            <td>NENHUM</td>
+            <td>0%</td>
+            <td>2024-09-28</td>
+            <td>2024-10-01</td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>Ana Pereira</td>
+            <td>R$ 850,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: red;
+                  color: white;
+                "
+                >Cancelado</span
+              >
+            </td>
+            <td>SPRINGSALE</td>
+            <td>20%</td>
+            <td>2024-09-25</td>
+            <td>2024-09-26</td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>Paulo Fernandes</td>
+            <td>R$ 490,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: orange;
+                  color: white;
+                "
+                >Processando</span
+              >
+            </td>
+            <td>NEWYEAR</td>
+            <td>5%</td>
+            <td>2024-10-03</td>
+            <td>2024-10-04</td>
+          </tr>
+          <tr>
+            <td>006</td>
+            <td>Juliana Castro</td>
+            <td>R$ 780,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: green;
+                  color: white;
+                "
+                >Entregue</span
+              >
+            </td>
+            <td>FRETEGRATIS</td>
+            <td>0%</td>
+            <td>2024-09-30</td>
+            <td>2024-10-02</td>
+          </tr>
+          <tr>
+            <td>007</td>
+            <td>Pedro Almeida</td>
+            <td>R$ 350,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: blue;
+                  color: white;
+                "
+                >Enviado</span
+              >
+            </td>
+            <td>NENHUM</td>
+            <td>0%</td>
+            <td>2024-10-01</td>
+            <td>2024-10-03</td>
+          </tr>
+          <tr>
+            <td>008</td>
+            <td>Fernanda Lima</td>
+            <td>R$ 1.200,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: green;
+                  color: white;
+                "
+                >Entregue</span
+              >
+            </td>
+            <td>SAVE20</td>
+            <td>20%</td>
+            <td>2024-09-25</td>
+            <td>2024-09-30</td>
+          </tr>
+          <tr>
+            <td>009</td>
+            <td>Bruno Costa</td>
+            <td>R$ 620,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: red;
+                  color: white;
+                "
+                >Cancelado</span
+              >
+            </td>
+            <td>BLACKFRIDAY</td>
+            <td>15%</td>
+            <td>2024-09-28</td>
+            <td>2024-09-29</td>
+          </tr>
+          <tr>
+            <td>010</td>
+            <td>Clara Menezes</td>
+            <td>R$ 180,00</td>
+            <td>
+              <span
+                style="
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  background-color: orange;
+                  color: white;
+                "
+                >Processando</span
+              >
+            </td>
+            <td>NENHUM</td>
+            <td>0%</td>
+            <td>2024-10-02</td>
+            <td>2024-10-04</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="modal-modal-container">
+        
+        <div class="modal-modal">
+            <i class="fa-solid fa-xmark modal-close-modal"></i>
+            <!-- CONTAINER DA ESQUERDA | OPÇÕES -->
+            <div class="modal-options-container">
+                <div class="modal-header-options-container">
+
+                    <span>Conta</span>
+
+                    <div class="modal-modal-profile-area">
+                        <div class="modal-picture-container">
+                            <div class="modal-picture"></div>
+                            
+                            <div class="modal-infos-user">
+                                <p>João Roberto da Silva</p>
+                                <span>Gerente</span>
+                            </div>
+                        </div>
+                        
+                        <button>Editar</button>
+                    </div>
+
+                    <div class="modal-line-divider"></div>
+                </div>
+
+                <div class="modal-options-select">
+                    <span>Geral</span>
+
+                    <div class="modal-options">
+
+                        <div class="modal-option" id="modal-restaurant-data">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>Dados do Restaurante</p>
+                        </div>
+
+                        <div class="modal-option" id="modal-restaurant-settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <p>Configurações Operacionais</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-menu">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                            <p>Cardápio</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-special-hours">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>Horários Especiais</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-alerts">
+                            <i class="fa-solid fa-bell"></i>
+                            <p>Notificações</p>
+                        </div>
+                        <div class="modal-option" id="modal-restaurant-coupons">
+                            <i class="fa-solid fa-gifts"></i>
+                            <p>Promoções e Cupons</p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <!-- CONTAINER DIREITO | OPÇÃO SELECIONADA -->
+            <div class="modal-option-result">
+                
+                <form action="" class="modal-form">
+                    <div class="modal-change-picture">
+                        <div class="modal-profile-picture"></div>
+                        <label for="upload-picture" class="modal-upload-picture">Carregar Imagem</label>
+                        <input type="file" id="upload-picture" hidden>
+
+                    </div>
+                    <div class="modal-fields">
+                        <div class="modal-field">
+                            <label for="profile-name">Nome do Perfil</label>
+                            <input type="text" id="profile-name">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-email">E-mail</label>
+                            <input type="email" id="profile-email">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-tel">Número de Telefone</label>
+                            <input type="tel" id="profile-tel">
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-acess">Nível de Acesso</label>
+                            <select disabled name="profile-acess" id="profile-acess">
+                                <option value="gerente">Gerente</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="supervisor">Supervisor</option>
+                                <option value="analista">Analista</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-alert">Preferência de Notificação</label>
+                            <select name="profile-alert" id="profile-aler">
+                                <option value="SMS">SMS</option>
+                                <option value="whatsapp">Whatsapp</option>
+                                <option value="email">email</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label for="profile-nasc">Data de Nascimento</label>
+                            <input type="date" id="profile-nasc">
+                        </div>
+                    </div>
+                    <div class="modal-buttons-form-profile">
+                        <button class="modal-exit-btn"><a href="../../pages/LoginPage/index.html">Sair da Conta</a></button>
+                        <button class="modal-save-btn" type="submit">Salvar</button>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+    </main>
+  </body>
+  <script src="https://kit.fontawesome.com/0ec44f1edc.js" ></script>
+  <script src="./script.js"></script>
+  <script src="../../components/profileModal/script.js"></script>
+</html>
